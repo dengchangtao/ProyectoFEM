@@ -1,1 +1,50 @@
-adsfasdf
+La formulación fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
+
+\begin{align*}
+\text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$ tal que:}\\
+\omega^2 u + (gh u,_i),_i  = 0, \ \ \ \ & \boldsymbol{x} \in \Omega \\
+\frac{\partial u}{\partial n} = u,_i n_i = 0, \ \ \ \ & \boldsymbol{x} \in \partial \Omega_h \ & (S) \\
+u=0, \ \ \ \ &\boldsymbol{x} \in \partial \Omega_g\\
+\end{align*}
+
+Sean:\\ \\
+$ \mathcal{V} = \left \{ v \in H^1 (\Omega, \mathbb{R}) \ /\  v|_{\partial \Omega_g} = 0 \right \}$\\
+$ \mathcal{S} = \left \{ u \in H^1 (\Omega) \ /\  u,_i n_i = 0, \ \ \boldsymbol{x} \in \partial \Omega_h \right \}$\\ 
+
+multiplicando la ecuaci\'on de Helmholtz por $-v \in \mathcal{V}$ e integrando por partes:\\
+
+$$-\int_{\Omega} v \left( \omega^2 u + (gh u,_i),_i \right) \mathrm{d}\boldsymbol{x} = 0$$
+
+$$-\int_{\Omega} v ( \omega^2 u )\mathrm{d}\boldsymbol{x} -\int_{\partial \Omega} v (gh u,_i) n_i \mathrm{d} S
++\int_{\Omega} v,_i g h u,_i \mathrm{d}\boldsymbol{x} = 0$$
+
+Pero, por condici\'on de borde: $u,_i n_i = 0 \ \forall \boldsymbol{x} \in \partial \Omega_h$, luego
+
+$$-\int_{\Omega} v ( \omega^2 u )\mathrm{d}\boldsymbol{x} 
++\int_{\Omega} v,_i g h u,_i \mathrm{d}\boldsymbol{x} = 0$$
+
+O, en forma abstracta:
+\begin{equation}
+a(v, u) - \omega^2 (v, u) = 0
+\label{eq:debil_abstracta}
+\end{equation}
+
+Luego, 
+
+\begin{align*}
+\text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$, $u \in \mathcal{S} $, $\omega \in \mathbb{R}$, tal que:}\\
+a(v, u) - \omega^2 (v, u) = 0 \ \ \ \ \  & (W) \\
+\end{align*}
+
+Formulaci\ón Galerkin:
+
+Sean $u^h \in \mathcal{S}^h \right( \equiv \mathcal{V}^h \right)$ con $\mathcal{V}^h \in \mathcal{V}$
+
+entonces:
+
+$$ a(v^h, u^h) - \omega^2 (v^h, u^h) = 0 $$
+
+Luego la formulaci\ón galerkin queda:
+
+
+
