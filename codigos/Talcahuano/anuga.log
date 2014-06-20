@@ -1,0 +1,16 @@
+2014-06-19 21:36:23,693 INFO           anuga.utilities.log:0   |Logfile is './anuga.log' with logging level of INFO, console logging level is CRITICAL
+2014-06-19 21:36:23,694 INFO                mesh_interface:90  |Resource usage: memory=810.6MB resident=140.9MB stacksize=0.1MB
+2014-06-19 21:36:23,694 INFO                mesh_interface:90  |#@# sys_platform, linux2
+2014-06-19 21:36:23,694 INFO                mesh_interface:90  |#@# start_memory, 810.62890625
+2014-06-19 21:36:23,695 INFO                mesh_interface:90  |#@# start_resident, 140.92578125
+2014-06-19 21:36:23,695 INFO                mesh_interface:90  |#@# start_stacksize, 0.13671875
+2014-06-19 21:36:23,695 INFO                mesh_interface:91  |#@# maximum_triangle_area, 20736
+2014-06-19 21:36:23,695 INFO                mesh_interface:92  |#@# minimum_triangle_angle, 28.0
+2014-06-19 21:36:23,696 INFO                mesh_interface:93  |#@# startMesh, '2014-06-19 21:36:23'
+2014-06-19 21:36:23,697 CRITICAL            mesh_interface:355 |Generating mesh to file 'talcahuano4.msh'
+2014-06-19 21:36:24,840 CRITICAL                       log:173 |
+Traceback (most recent call last):
+  File "malla_real.py", line 66, in <module>
+    s+='%.7f '%z[ny-j-1,i]
+KeyboardInterrupt
+
