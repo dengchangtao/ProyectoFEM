@@ -2,6 +2,9 @@ import numpy as np
 import scipy.io
 import anuga
 import matplotlib.pyplot as plt
+from matplotlib import rc,cm
+font = {'size'   : 6}
+rc('font', **font)
 
 #obtener los datos
 mat=scipy.io.loadmat('ht.mat')
@@ -10,29 +13,62 @@ y = mat['yh'][0,4]
 x,y = np.meshgrid(x,y)
 z = mat['zh'][0,4]
 #dibujar para comparar despues
-plt.pcolormesh(x,y,z)
-plt.axis('equal')
-plt.savefig('00bati_original.png')
 
+plt.figure()
+plt.pcolormesh(x,y,z,cmap=cm.gist_earth)
+plt.axis('equal')
 plt.axis('off')
-plt.tight_layout()
+plt.savefig('00bati_original.png',bbox_inches='tight',dpi=300)
+plt.axis('off')
 plt.close()
 
 #--------la malla-----------
-bounding_polygon=[[x.min(),y.min()],
-		    [x.max(),y.min()],
-		    [x.max(),y.max()],
-		    [x.min(),y.max()]]
+xa=668400
+ya=5945600+550
+xb=681300
+yb=5955500+200
+
+x0=xa
+y0=y.min()
+x1=xb
+y1=y.min()
+x2=32000+x.min()-1000
+y2=17500+y.min()
+x3=xb
+y3=yb
+x4=xa
+y4=ya
+x5=15600+x.min()
+y5=9500+y.min()
+#el poligono que encierra al dominio
+b=[[x0,y0],
+  [x1,y1],
+  [x2,y2],
+  [x3,y3],
+  [x4,y4],
+  [x5,y5],
+  [x0,y0]]
+b=np.array(b)
+
+plt.figure()
+plt.pcolormesh(x,y,z,cmap=cm.gist_earth)
+plt.plot(b[:,0],b[:,1])
+plt.contour(x,y,z,[0.],colors='w')
+plt.axis('equal')
+plt.axis('off')
+plt.savefig('01bati_original+extent+curva0.png',bbox_inches='tight',dpi=300)
+plt.close()
+
+bounding_polygon=b[:-1,:]
 tags={'left' : 	[3],  'bot' :	[0],'right' :	[1],'top' : [2]} 
 #el tama\~no m\'aximo
-dx=48*3
+dx=48*5
 anuga.create_mesh_from_regions(bounding_polygon,
 				    boundary_tags=tags,
 				    maximum_triangle_area=dx*dx,     
 				    filename='talcahuano4.msh',
 				    use_cache=False,
 				    verbose=True)
-
 
 #----------la batimetria------------
 
@@ -50,7 +86,7 @@ fprj=open('talcahuano4.prj','w')
 fprj.write(sprj)
 fprj.close()
 
-#archivo con .asc con la bati en formato arcview
+#archivo .asc con la bati en formato arcview
 nx=len(mat['xh'][0,4][0])
 ny=len(mat['yh'][0,4][0])
 f=open('talcahuano4.asc','w')
@@ -76,73 +112,80 @@ t=domain.get_triangles()
 xy=domain.get_nodes()
 xt,yt,zt,t=domain.get_quantity('elevation').get_vertex_values()
 
-#plt.triplot(xy[:,0],xy[:,1],t)
-plt.tripcolor(xt,yt,t,zt)
-plt.axis('equal')
-plt.savefig('01bati_triangular.png')
-plt.close('all')
 
-plt.figure(figsize=(16.,16.))
-plt.tripcolor(xt,yt,t,zt)
-plt.triplot(xt,yt,t,linewidth=0.5)
+plt.figure()
+plt.pcolormesh(x-b[:,0].min(),y-b[:,1].min(),z,cmap=cm.gray)
+plt.tripcolor(xt,yt,t,zt,cmap=cm.gist_earth)
+plt.contour(x-b[:,0].min(),y-b[:,1].min(),z,[0.],colors='w')
 plt.axis('equal')
-plt.xlim(10000.,20000.)
-plt.ylim(5000,25000)
-plt.savefig('02bati_triangular_zoom.png')
+plt.axis('off')
+plt.savefig('02bati+batitriangular.png',bbox_inches='tight',dpi=300)
 plt.close()
+
 #----matrices ID y LM
 #criterio: si z[x,y]=0 => no es un grado de libertad
 #matriz ID primero
-nodosmalos=[19454,17914,20148,17085,18659,18941,16080,18947, \
-  15443,18361,17155,21533,21185,20914,18311,14573,18355,15563, \
-  20502,21187,21189,21540,22402,22400,22401,21528,21526,25165,\
-  17343,13910,12564,45632,13356,12406,14816,17974,16935,22348,17919,23524,23812,\
-  19134,16601,18401,16158,18751,19494,17521,17542,41113,19010,19005,19003,18999,20237,\
-  17569,17574,19744,41163,17561,19480,19004,17564,10956,41213, 
-  22847, 26930, 44956, 45444, 26609, 25468, 25941, 25632, \
-  26462, 26913, 44938, 24565, 25219, 25623, 42519, 42520, \
-  27942,26281,35234,25235,34690,34668,34512,33625,33584,\
-  34654,33515,34654,34639,43650,44192,44043,36963,38393,\
-  38044,38231,44269,38337,38467,44324,35235]
+
+
+#primero quito losnodos que estan bajo
+#un nivel dado, ojal\'a <0
+#y ademas quito nodos 'malos', que estan bajo 0
+#pero no son de la bah\'ia, sino de la playa
+nodosmalos=[14,25,167,166,175,123,74,3373,3383,157,130,116,153,3470,\
+  1284,1218,1016,956,970,1119,1009,1122,1123,1124,1479,1411,1685,1997,\
+  1224,1994,1636,2827]
+nodosbuenos=[]
 p=-1
 idm=-1*np.ones(xt.shape,dtype=int)
 for a in range(xt.shape[0]):
-  if zt[a]<-0.1 and not a in nodosmalos:
+  if zt[a]<-0. and not a in nodosmalos:# and not a in nodosmalos:
     p+=1
     idm[a]=p
-#gdl=np.nonzero(zt<-0.1)[0]
-#p=np.linspace(0,len(gdl)-1,len(gdl),dtype=int)
-#idm[gdl]=p
-#matriz LM
+    nodosbuenos.append(a)
+otrosnodos=np.linspace(0,len(xt)-1,len(xt),dtype=int)
+otrosnodos=list(set(otrosnodos)-set(nodosmalos)-set(nodosbuenos))
 lm = np.zeros(t.shape)
 for e in range(lm.shape[0]):
   for a in range(3):
     A=t[e,a]    
     lm[e,a]=idm[A]
-    
+
+nodosbuenos=list(set(nodosbuenos)-set(nodosmalos))
 criterio1=np.nonzero((lm[:,0]>-1))[0]
 criterio2=np.nonzero((lm[:,1]>-1))[0]
 criterio3=np.nonzero((lm[:,2]>-1))[0]
 todos=np.hstack([criterio1,criterio2,criterio3])
 indices=np.unique(todos)
+
+#---dibujos
+plt.figure()
 plt.tripcolor(xt,yt,t[indices,:],zt)
 plt.triplot(xt,yt,t[indices,:],linewidth=0.1)
+plt.scatter(xt[nodosbuenos],yt[nodosbuenos],s=1.,edgecolor='none',facecolor='k')
+plt.scatter(xt[nodosmalos],yt[nodosmalos],s=1.,edgecolor='none',facecolor='r')
+plt.scatter(xt[otrosnodos],yt[otrosnodos],s=1.,edgecolor='none',facecolor='b')
 plt.axis('equal')
-plt.savefig('03bati_triangular_gdls.png')
+plt.savefig('03bati_gdl.png',dpi=300)
+plt.close()
+plt.figure()
+for a in range(xt.shape[0]):
+  if idm[a]>-1:
+    plt.text(xt[a],yt[a],'n%i'%a,fontsize=12)    
+plt.tripcolor(xt,yt,t[indices,:],zt)
+plt.triplot(xt,yt,t[indices,:],linewidth=0.1)
 plt.close()
 
-plt.figure(figsize=(12.,12.))
-plt.tripcolor(xt,yt,t[indices,:],zt)
-plt.triplot(xt,yt,t[indices,:],linewidth=0.2)
-plt.savefig('04bati_triangular_gdls_filtrada.png')
-#for a in range(xt.shape[0]):
-  #if idm[a]>-1 and xt[a]>31000 and xt[a]<32000 and yt[a]>14000 and yt[a] < 18000:
-  ##and xt[a]>20000 and xt[a]<28000 and yt[a]<8000 and yt[a]>0:
-    #print a,idm[a]
-    #plt.text(xt[a],yt[a],'n%i'%a,fontsize=12)    
-plt.scatter(xt[nodosmalos],yt[nodosmalos],c='r',facecolors='none')
-plt.savefig('06bati_nodos_malos.png')
-plt.close('all')
+plt.figure()
+criterio4=np.nonzero((lm[:,0]>-1)*(lm[:,1]>-1)*(lm[:,2]>-1))[0]
+plt.pcolormesh(x-b[:,0].min(),y-b[:,1].min(),z,cmap=cm.gist_earth)
+plt.contour(x-b[:,0].min(),y-b[:,1].min(),z,[0.],colors='w')
+plt.triplot(xt,yt,t[criterio4],linewidth=0.3)
+plt.axis('equal')
+plt.axis('off')
+plt.savefig('04bati+malla.png',bbox_inches='tight',dpi=300)
+plt.close()
+
+
 
 #escribir a archivos
 fxyz = open('xyz.txt','w')
@@ -166,3 +209,17 @@ ID = np.loadtxt('id.txt')
 IEN = np.loadtxt('ien.txt')
 LM = np.loadtxt('lm.txt')
 
+
+
+#nodosmalos malla dx=48?
+#nodosmalos=[19454,17914,20148,17085,18659,18941,16080,18947, \
+  #15443,18361,17155,21533,21185,20914,18311,14573,18355,15563, \
+  #20502,21187,21189,21540,22402,22400,22401,21528,21526,25165,\
+  #17343,13910,12564,45632,13356,12406,14816,17974,16935,22348,17919,23524,23812,\
+  #19134,16601,18401,16158,18751,19494,17521,17542,41113,19010,19005,19003,18999,20237,\
+  #17569,17574,19744,41163,17561,19480,19004,17564,10956,41213, 
+  #22847, 26930, 44956, 45444, 26609, 25468, 25941, 25632, \
+  #26462, 26913, 44938, 24565, 25219, 25623, 42519, 42520, \
+  #27942,26281,35234,25235,34690,34668,34512,33625,33584,\
+  #34654,33515,34654,34639,43650,44192,44043,36963,38393,\
+  #38044,38231,44269,38337,38467,44324,35235]
