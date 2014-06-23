@@ -1,0 +1,89 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage{graphicx} % Graphics
+\usepackage{amsmath, amsfonts, amssymb, amsthm} % Math stuff
+\usepackage{enumerate, array, multirow}
+
+%%%  Language Settings  %%%
+%\usepackage[spanish]{babel}  % Spanish language
+\usepackage[applemac]{inputenc}  % Allows for accents!! Useful for spanish documents
+%\usepackage[latin1]{inputenc}
+
+%%%  Page settings  %%%
+%\usepackage{fullpage} % quick-and-dirty way to get 1in for all margins
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2.5cm,nohead]{geometry}
+
+\title{T\'itulo del proyecto final \'o nombre del art\'iculo}
+\author{Jos\'e Galaz, Jaime Soto}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	El {\it abstract} resume en un p\'arrafo los aspectos m\'as importantes de todo el art\'iculo en el siguiente orden:
+	\begin{itemize}
+		\item La pregunta que gu\'ia y motiva la investigaci\'on realizada (resumen en una o dos frases de la secci\'on {\bf Introducci\'on})
+		\item El marco te\'orico y el m\'etodo empleado en la investigaci\'on (resumen en una o dos frases de la secci\'on {\bf Marco Te\'orico}). Por ejemplo, que tipo de cinem\'atica y modelo constitutivo fueron empleado
+		\item Los resultados m\'as importantes obtenidos de la investigaci\'on (resumen de una o dos frases de la secci\'on {\bf Resultados}).
+		\item La conclusiones mas relevantes a partir de los resultados obtenidos (resumen de una o dos frases de la secci\'on {\bf Discusi\'on})
+	\end{itemize}
+ Finalmente, un {\it abstract} no debe tener mas de 250-300 palabras.
+\end{abstract}
+
+\section{Introducci\'on}
+La funci\'on de la secci\'on {\it Introducci\'on} es 
+\begin{itemize}
+	\item Establecer el contexto general de la investigaci\'on (ej: por qu\'e es importante/interesante resolver problemas del tipo que usted resuelve). Generalmente comprende un estudio de la literatura existente que motivaron y sobre la que se basa la investigaci\'on, no olvide incluir citas en esta secci\'on (m\'inimamente aquellas incluidas en su propuesta).
+	\item Describir claramente el objetivo principal de la investigaci\'on, incluyendo objetivos espec\'ificos, hip\'otesis empleadas, y los problemas que se quieren resolver o las preguntas que gu\'ian a investigaci\'on.
+	\item Explique (sin entrar en detalles demasiado t\'ecnicos) como abordar\'a el problema a investigar. Un punto de partida es la metodolog\'ia entregada en la propuesta de investigaci\'on.
+\end{itemize}
+No olvide en esta secci\'on citar a los autores y sus trabajos relevantes para su proyecto (en {\LaTeX} las citas se hace con el comando {\tt \textbackslash cite{}}, por ejemplo, \cite{hughes2000} y  \cite{goktepekuhl2009}. En particular, este {\it template} se inspir\'o en la referencia \cite{riceweb}.
+
+\section{Marco Te\'orico}
+  \subsection{Ecuaciones fundamentales}
+  \input{fuerte.tex}
+  \subsection{Formulaci\'on variacional y de Galerkin}
+  \input{variacional_galerkin.tex}
+  \subsection{Comentarios sobre la implementaci\'on y convergencia del m\'etodo}
+\section{Validaci\'on del modelo}
+  \input{validacion.tex}
+\section{Resultados}
+  \input{resultados.tex}
+En esta secci\'on usted debe presentar los resultados obtenidos de su investigaci\'on, en una secuencia l\'ogica. En esta secci\'on usted NO debe interpretar los resultados ni concluir algo a partir de estos. Sin embargo, si puede destacar algunos resultados importantes (por ejemplo, {\it es importante notar que el valor del estiramiento principal mayor alcanzan valores sobre 1.5, que corresponden a una deformaci\'on axial del 50 \%}) que ser\'an el punto de partida de sus conclusiones en la secci\'on de discusi\'on. Los gr\'aficos deben ser confeccionados con mucha atenci\'on, de manera de ser muy claros y no tener demasiada informaci\'on que dificulte leerlos. Sin embargo, sea elegante y eficiente, y no genere gr\'aficos que no reporten informaci\'on importante. No olvide agregar leyendas para las figuras (con el comando {\tt \textbackslash caption}) que ayuden la compresi\'on de estas (no repita informaci\'on en el texto principal). Para un ejemplo, vea la figura \ref{fig:tvconv}.
+
+
+
+\section{Discusion}
+En esta secci\'on usted debe interpretar sus resultados presentados en la secci\'on anterior, y compararlos/contrastarlos con resultados conocidos previamente en otros art\'iculos o libros. Lo anterior le permitir\'a generar conclusiones a partir de la interpretaci\'on de sus resultados. Sea claro en los pasos de su razonamiento que lo llevan a sus conclusiones. La secci\'on de discusi\'on debe responder las preguntas o verificar las hip\'otesis planteadas en la secci\'on de {\it introducci\'on}. Es recomendable tambi\'en incluir en la discusi\'on cuales son las limitantes de su investigaci\'on, y c\'omo pueden afectar los resultados y conclusiones obtenidas. Finalmente, es recomendable incluir posibles ideas \'o proyectos futuros que nacen a ra\'iz del trabajo de investigaci\'on presentado en el art\'iculo.
+
+
+\begin{thebibliography}{10}
+
+\bibitem{nica2011}
+  M. Nica. Eigenvalues and Eigenfunctions of the Laplacian. \emph{The Waterloo Mathematics Review} 2011; {\bf 1}, No.2, 23--34.
+\bibitem{hughes2000}
+  T.J.R. Hughes, \emph{The finite element method: Linear static and dynamic finite element analysis}. Dover Publications, 2000.
+  
+\bibitem{zienkiewicz2006}
+  O.C. Zienkiewicz, R.L. Taylor, J.Z. Zhu, \emph{The finite element method: Its basis and fundamentals}. Sixth edition, Butterworth-Heinemann, 2006.  
+
+\bibitem{riceweb} {\tt http://www.ruf.rice.edu/~bioslabs/tools/report/reportform.html }
+
+\bibitem{goktepekuhl2009}
+	S. G\"{o}ktepe and E. Kuhl.Computational modeling of cardiac electrophysiology: A novel finite element approach. \emph{International Journal for Numerical Methods in Engineering} 2009; {\bf 79}, 156--178.
+
+\end{thebibliography}
+
+\appendix
+
+\section{Sobre los ap\'endices}
+	Los ap\'endices contienen informaci\'on que no es de car\'acter esencial para entender el art\'iculo. Muchas derivaciones de ecuaciones, demostraciones de teoremas (con la salvedad de art\'iculos en revistas de matem\'atica), tablas de datos, etc., son inclu\'idas en el ap\'endice.
+	
+\section{Sobre la evaluaci\'on del art\'iculo final}
+	El art\'iculo final ser\'a evaluado tanto en los aspectos acad\'emicos (calidad de los resultados obtenidos) como en aspectos de presentaci\'on y redacci\'on. En particular, se considerar\'a en la evaluaci\'on la redacci\'on, diagramaci\'on, ortograf\'ia, correcta referenciaci\'on (incluir las citas y bibliograf\'ia), gr\'aficos y figuras, entre otros.
+
+
+
+
+\end{document}
