@@ -1,0 +1,41 @@
+import numpy as np
+import scipy.io
+import anuga
+import matplotlib.pyplot as plt
+from matplotlib import rc,cm
+font = {'size'   : 6}
+rc('font', **font)
+
+#obtener los datos
+#--------la malla-----------
+N=4
+dx=np.pi/N**2
+theta = np.linspace(0,2*np.pi-0.1,2*np.pi/N) # cada 18 grados
+
+xbound = np.cos(theta)
+ybound = np.sin(theta)
+b = np.vstack([xbound,ybound]).T
+
+
+bounding_polygon=list(b)
+tags={'borde' : range(b.shape[0]) } 
+#el tama\~no m\'aximo
+
+anuga.create_mesh_from_regions(bounding_polygon,
+				    boundary_tags=tags,
+				    maximum_triangle_area=dx*dx,     
+				    filename='circulo.msh',
+				    use_cache=False,
+				    verbose=True)
+
+#ahora quiero sacar la triangulacion e interpolacion
+domain = anuga.Domain('circulo.msh', use_cache=False, verbose=True)
+t=domain.get_triangles()
+xy=domain.get_nodes()
+
+plt.figure()
+plt.triplot(xy[:,0],xy[:,1],t)
+plt.plot(xbound-xbound.min(),ybound-ybound.min())
+plt.axis('equal')
+plt.axis('off')
+plt.show()

@@ -1,0 +1,813 @@
+2014-06-30 22:06:17,681 INFO           anuga.utilities.log:0   |Logfile is './anuga.log' with logging level of INFO, console logging level is CRITICAL
+2014-06-30 22:06:17,682 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:17,683 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:17,683 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:17,684 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:17,684 INFO                  general_mesh:92  |#@# numTriangles, 2
+2014-06-30 22:06:17,684 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:17,685 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:17,686 INFO                  general_mesh:375 |#@# aoi, '2.0'
+2014-06-30 22:06:17,686 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:17,686 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:17,686 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:17,686 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:17,687 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:17,687 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:17,687 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:17'
+2014-06-30 22:06:17,687 INFO                neighbour_mesh:195 |Resource usage: memory=445.1MB resident=53.2MB stacksize=0.1MB
+2014-06-30 22:06:17,687 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:17,688 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 445.06640625
+2014-06-30 22:06:17,688 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 53.21484375
+2014-06-30 22:06:17,688 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:17,688 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:17,688 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:17,688 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:17,689 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:17,689 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:17,689 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:17,689 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:17,689 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:17,690 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:17,884 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:17,884 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:17,884 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:17,885 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:17,885 INFO                  general_mesh:92  |#@# numTriangles, 3
+2014-06-30 22:06:17,885 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:17,886 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:17,886 INFO                  general_mesh:375 |#@# aoi, '2.37764129074'
+2014-06-30 22:06:17,886 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:17,886 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:17,887 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:17,887 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:17,887 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:17,887 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:17,887 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:17'
+2014-06-30 22:06:17,888 INFO                neighbour_mesh:195 |Resource usage: memory=810.4MB resident=73.1MB stacksize=0.1MB
+2014-06-30 22:06:17,888 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:17,888 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 810.4453125
+2014-06-30 22:06:17,888 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 73.10546875
+2014-06-30 22:06:17,888 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:17,888 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:17,889 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:17,889 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:17,889 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:17,889 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:17,890 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:17,890 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:17,890 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:17,890 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:17,986 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:17,986 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:17,987 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:17,987 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:17,987 INFO                  general_mesh:92  |#@# numTriangles, 4
+2014-06-30 22:06:17,988 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:17,988 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:17,989 INFO                  general_mesh:375 |#@# aoi, '2.59807621135'
+2014-06-30 22:06:17,989 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:17,989 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:17,989 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:17,989 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:17,990 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:17,990 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:17,990 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:17'
+2014-06-30 22:06:17,990 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:17,990 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:17,991 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:17,991 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.3203125
+2014-06-30 22:06:17,991 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:17,991 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:17,991 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:17,991 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:17,992 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:17,992 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:17,992 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:17,992 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:17,992 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:17,993 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,090 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,091 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,091 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,091 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,092 INFO                  general_mesh:92  |#@# numTriangles, 7
+2014-06-30 22:06:18,092 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,093 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,093 INFO                  general_mesh:375 |#@# aoi, '2.73641018864'
+2014-06-30 22:06:18,093 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,093 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,093 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,094 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,094 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,094 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,094 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,095 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,095 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,095 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,095 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.3359375
+2014-06-30 22:06:18,095 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,095 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,096 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,096 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,096 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,096 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,096 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,097 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,097 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,097 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,196 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,196 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,197 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,197 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,197 INFO                  general_mesh:92  |#@# numTriangles, 8
+2014-06-30 22:06:18,197 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,198 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,198 INFO                  general_mesh:375 |#@# aoi, '2.82842712475'
+2014-06-30 22:06:18,199 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,199 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,199 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,199 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,199 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,199 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,200 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,200 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,200 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,200 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,200 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.34375
+2014-06-30 22:06:18,201 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,201 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,201 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,201 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,201 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,202 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,202 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,202 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,202 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,202 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,301 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,301 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,302 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,302 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,302 INFO                  general_mesh:92  |#@# numTriangles, 9
+2014-06-30 22:06:18,302 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,303 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,303 INFO                  general_mesh:375 |#@# aoi, '2.89254424359'
+2014-06-30 22:06:18,303 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,304 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,304 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,304 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,304 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,304 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,305 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,305 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,305 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,305 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,305 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.34375
+2014-06-30 22:06:18,306 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,306 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,306 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,306 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,306 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,307 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,307 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,307 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,307 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,307 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,408 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,408 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,409 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,409 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,409 INFO                  general_mesh:92  |#@# numTriangles, 10
+2014-06-30 22:06:18,409 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,412 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,412 INFO                  general_mesh:375 |#@# aoi, '2.93892626146'
+2014-06-30 22:06:18,413 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,413 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,414 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,415 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,415 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,416 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,416 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,417 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,418 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,418 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,419 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.34765625
+2014-06-30 22:06:18,419 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,420 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,420 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,420 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,422 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,422 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,422 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,422 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,422 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,422 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,524 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,524 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,525 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,525 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,525 INFO                  general_mesh:92  |#@# numTriangles, 11
+2014-06-30 22:06:18,526 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,526 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,527 INFO                  general_mesh:375 |#@# aoi, '2.97352449601'
+2014-06-30 22:06:18,527 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,527 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,527 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,527 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,528 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,528 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,528 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,528 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,528 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,528 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,529 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.34765625
+2014-06-30 22:06:18,529 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,529 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,529 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,529 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,530 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,530 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,530 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,530 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,530 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,531 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,632 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,632 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,633 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,633 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,633 INFO                  general_mesh:92  |#@# numTriangles, 12
+2014-06-30 22:06:18,633 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,634 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,634 INFO                  general_mesh:375 |#@# aoi, '3.0'
+2014-06-30 22:06:18,634 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,635 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,635 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,635 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,635 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,635 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,636 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,636 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,636 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,636 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,636 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.34765625
+2014-06-30 22:06:18,637 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,637 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,637 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,637 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,637 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,638 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,638 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,638 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,638 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,638 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,745 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,745 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,746 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,746 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,746 INFO                  general_mesh:92  |#@# numTriangles, 21
+2014-06-30 22:06:18,747 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,747 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,748 INFO                  general_mesh:375 |#@# aoi, '3.02070061828'
+2014-06-30 22:06:18,748 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,748 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,748 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,749 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,749 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,749 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,749 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,749 INFO                neighbour_mesh:195 |Resource usage: memory=813.6MB resident=76.3MB stacksize=0.1MB
+2014-06-30 22:06:18,750 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,750 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.55859375
+2014-06-30 22:06:18,750 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.34765625
+2014-06-30 22:06:18,750 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,750 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,750 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,751 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,751 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,751 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,751 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,752 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,752 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,752 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,858 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,858 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,858 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,859 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,859 INFO                  general_mesh:92  |#@# numTriangles, 22
+2014-06-30 22:06:18,859 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,860 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,860 INFO                  general_mesh:375 |#@# aoi, '3.03718617382'
+2014-06-30 22:06:18,860 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,860 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,861 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,861 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,861 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,861 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,861 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,862 INFO                neighbour_mesh:195 |Resource usage: memory=813.7MB resident=76.5MB stacksize=0.1MB
+2014-06-30 22:06:18,862 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,862 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.69921875
+2014-06-30 22:06:18,862 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.48046875
+2014-06-30 22:06:18,862 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,863 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,863 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,863 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,863 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,863 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,864 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,864 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,864 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,864 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:18,969 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:18,969 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:18,970 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:18,970 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:18,970 INFO                  general_mesh:92  |#@# numTriangles, 29
+2014-06-30 22:06:18,970 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:18,971 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:18,971 INFO                  general_mesh:375 |#@# aoi, '3.05052482307'
+2014-06-30 22:06:18,972 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:18,972 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:18,972 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:18,972 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:18,972 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:18,973 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:18,973 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:18'
+2014-06-30 22:06:18,973 INFO                neighbour_mesh:195 |Resource usage: memory=813.7MB resident=76.6MB stacksize=0.1MB
+2014-06-30 22:06:18,973 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:18,973 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.69921875
+2014-06-30 22:06:18,974 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.5625
+2014-06-30 22:06:18,974 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:18,974 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:18,974 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:18,974 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:18,975 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:18,975 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:18,975 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:18,975 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:18,975 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:18,976 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,082 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,082 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,083 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,083 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,083 INFO                  general_mesh:92  |#@# numTriangles, 38
+2014-06-30 22:06:19,084 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,085 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,085 INFO                  general_mesh:375 |#@# aoi, '3.06146745892'
+2014-06-30 22:06:19,085 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,085 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,085 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,086 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,086 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,086 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,086 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,086 INFO                neighbour_mesh:195 |Resource usage: memory=813.8MB resident=76.7MB stacksize=0.1MB
+2014-06-30 22:06:19,087 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,087 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 813.84375
+2014-06-30 22:06:19,087 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.68359375
+2014-06-30 22:06:19,087 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,087 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,087 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,088 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,088 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,088 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,088 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,089 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,089 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,089 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,196 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,196 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,197 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,197 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,197 INFO                  general_mesh:92  |#@# numTriangles, 35
+2014-06-30 22:06:19,198 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,198 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,199 INFO                  general_mesh:375 |#@# aoi, '3.07055416259'
+2014-06-30 22:06:19,199 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,199 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,199 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,199 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,200 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,200 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,200 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,200 INFO                neighbour_mesh:195 |Resource usage: memory=814.0MB resident=76.8MB stacksize=0.1MB
+2014-06-30 22:06:19,200 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,201 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.00390625
+2014-06-30 22:06:19,201 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.8359375
+2014-06-30 22:06:19,201 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,201 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,201 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,201 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,202 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,202 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,202 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,202 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,203 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,203 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,310 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,310 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,310 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,311 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,311 INFO                  general_mesh:92  |#@# numTriangles, 42
+2014-06-30 22:06:19,311 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,312 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,312 INFO                  general_mesh:375 |#@# aoi, '3.07818128993'
+2014-06-30 22:06:19,312 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,312 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,313 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,313 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,313 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,313 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,314 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,314 INFO                neighbour_mesh:195 |Resource usage: memory=814.0MB resident=76.8MB stacksize=0.1MB
+2014-06-30 22:06:19,314 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,314 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.00390625
+2014-06-30 22:06:19,314 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.84765625
+2014-06-30 22:06:19,315 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,315 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,315 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,315 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,315 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,315 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,316 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,316 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,316 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,316 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,425 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,425 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,426 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,426 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,426 INFO                  general_mesh:92  |#@# numTriangles, 45
+2014-06-30 22:06:19,426 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,427 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,427 INFO                  general_mesh:375 |#@# aoi, '3.08464495744'
+2014-06-30 22:06:19,427 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,428 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,428 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,428 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,428 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,428 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,429 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,429 INFO                neighbour_mesh:195 |Resource usage: memory=814.1MB resident=76.9MB stacksize=0.1MB
+2014-06-30 22:06:19,429 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,429 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.13671875
+2014-06-30 22:06:19,429 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 76.9453125
+2014-06-30 22:06:19,430 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,430 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,430 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,430 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,430 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,431 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,431 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,431 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,431 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,431 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,541 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,541 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,542 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,542 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,542 INFO                  general_mesh:92  |#@# numTriangles, 52
+2014-06-30 22:06:19,542 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,543 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,543 INFO                  general_mesh:375 |#@# aoi, '3.09016994375'
+2014-06-30 22:06:19,544 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,544 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,544 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,544 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,544 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,545 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,545 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,545 INFO                neighbour_mesh:195 |Resource usage: memory=814.1MB resident=77.1MB stacksize=0.1MB
+2014-06-30 22:06:19,545 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,545 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.13671875
+2014-06-30 22:06:19,546 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.06640625
+2014-06-30 22:06:19,546 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,546 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,546 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,546 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,547 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,547 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,547 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,547 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,547 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,547 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,656 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,656 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,656 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,657 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,657 INFO                  general_mesh:92  |#@# numTriangles, 55
+2014-06-30 22:06:19,657 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,658 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,658 INFO                  general_mesh:375 |#@# aoi, '3.09492933131'
+2014-06-30 22:06:19,658 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,659 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,659 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,659 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,659 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,659 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,660 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,660 INFO                neighbour_mesh:195 |Resource usage: memory=814.1MB resident=77.1MB stacksize=0.1MB
+2014-06-30 22:06:19,660 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,660 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.13671875
+2014-06-30 22:06:19,660 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.06640625
+2014-06-30 22:06:19,661 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,661 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,661 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,661 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,661 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,662 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,662 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,662 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,662 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,662 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,775 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,775 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,776 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,776 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,776 INFO                  general_mesh:92  |#@# numTriangles, 62
+2014-06-30 22:06:19,776 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,777 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,777 INFO                  general_mesh:375 |#@# aoi, '3.09905812526'
+2014-06-30 22:06:19,778 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,778 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,778 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,778 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,778 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,779 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,779 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,779 INFO                neighbour_mesh:195 |Resource usage: memory=814.4MB resident=77.2MB stacksize=0.1MB
+2014-06-30 22:06:19,779 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,779 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.4296875
+2014-06-30 22:06:19,780 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.203125
+2014-06-30 22:06:19,780 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,780 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,780 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,780 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,781 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,781 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,781 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,781 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,781 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,781 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:19,903 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:19,904 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:19,904 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:19,905 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:19,905 INFO                  general_mesh:92  |#@# numTriangles, 65
+2014-06-30 22:06:19,905 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:19,906 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:19,906 INFO                  general_mesh:375 |#@# aoi, '3.10266286831'
+2014-06-30 22:06:19,906 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:19,907 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:19,907 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:19,907 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:19,907 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:19,907 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:19,908 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:19'
+2014-06-30 22:06:19,908 INFO                neighbour_mesh:195 |Resource usage: memory=814.6MB resident=77.3MB stacksize=0.1MB
+2014-06-30 22:06:19,908 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:19,908 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.5625
+2014-06-30 22:06:19,908 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.3359375
+2014-06-30 22:06:19,909 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:19,909 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:19,909 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:19,909 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:19,909 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:19,910 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:19,910 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:19,910 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:19,910 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:19,910 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,021 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,021 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,022 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,022 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,022 INFO                  general_mesh:92  |#@# numTriangles, 70
+2014-06-30 22:06:20,023 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,023 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,024 INFO                  general_mesh:375 |#@# aoi, '3.10582854123'
+2014-06-30 22:06:20,024 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,024 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,024 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,024 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,025 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,025 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,025 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,025 INFO                neighbour_mesh:195 |Resource usage: memory=814.7MB resident=77.5MB stacksize=0.1MB
+2014-06-30 22:06:20,025 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,026 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.703125
+2014-06-30 22:06:20,026 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.49609375
+2014-06-30 22:06:20,026 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,026 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,026 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,026 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,027 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,027 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,027 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,027 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,028 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,028 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,139 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,140 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,140 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,141 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,141 INFO                  general_mesh:92  |#@# numTriangles, 81
+2014-06-30 22:06:20,141 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,142 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,142 INFO                  general_mesh:375 |#@# aoi, '3.10862358956'
+2014-06-30 22:06:20,142 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,143 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,143 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,143 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,143 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,143 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,144 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,144 INFO                neighbour_mesh:195 |Resource usage: memory=814.7MB resident=77.5MB stacksize=0.1MB
+2014-06-30 22:06:20,144 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,144 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.703125
+2014-06-30 22:06:20,144 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.49609375
+2014-06-30 22:06:20,145 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,145 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,145 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,145 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,145 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,146 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,146 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,146 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,146 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,146 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,259 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,260 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,260 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,261 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,261 INFO                  general_mesh:92  |#@# numTriangles, 86
+2014-06-30 22:06:20,261 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,262 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,262 INFO                  general_mesh:375 |#@# aoi, '3.11110363574'
+2014-06-30 22:06:20,262 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,263 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,263 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,263 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,263 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,264 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,264 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,264 INFO                neighbour_mesh:195 |Resource usage: memory=815.0MB resident=77.7MB stacksize=0.1MB
+2014-06-30 22:06:20,264 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,264 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.984375
+2014-06-30 22:06:20,264 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.73828125
+2014-06-30 22:06:20,265 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,265 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,265 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,265 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,266 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,266 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,266 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,266 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,266 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,266 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,391 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,391 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,392 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,392 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,393 INFO                  general_mesh:92  |#@# numTriangles, 97
+2014-06-30 22:06:20,393 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,394 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,394 INFO                  general_mesh:375 |#@# aoi, '3.11331425502'
+2014-06-30 22:06:20,394 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,394 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,395 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,395 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,395 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,395 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,395 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,396 INFO                neighbour_mesh:195 |Resource usage: memory=815.0MB resident=77.7MB stacksize=0.1MB
+2014-06-30 22:06:20,396 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,396 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.984375
+2014-06-30 22:06:20,396 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.73828125
+2014-06-30 22:06:20,396 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,397 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,397 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,397 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,397 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,397 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,398 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,398 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,398 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,398 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,516 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,517 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,518 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,518 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,518 INFO                  general_mesh:92  |#@# numTriangles, 104
+2014-06-30 22:06:20,518 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,519 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,520 INFO                  general_mesh:375 |#@# aoi, '3.11529307539'
+2014-06-30 22:06:20,520 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,520 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,520 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,520 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,521 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,521 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,521 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,521 INFO                neighbour_mesh:195 |Resource usage: memory=815.0MB resident=77.8MB stacksize=0.1MB
+2014-06-30 22:06:20,521 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,522 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 814.984375
+2014-06-30 22:06:20,522 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.76171875
+2014-06-30 22:06:20,522 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,522 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,522 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,522 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,523 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,523 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,523 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,523 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,524 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,524 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,637 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,637 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,638 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,638 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,638 INFO                  general_mesh:92  |#@# numTriangles, 105
+2014-06-30 22:06:20,639 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,640 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,640 INFO                  general_mesh:375 |#@# aoi, '3.11707138306'
+2014-06-30 22:06:20,640 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,640 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,640 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,641 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,641 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,641 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,641 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,642 INFO                neighbour_mesh:195 |Resource usage: memory=815.1MB resident=77.9MB stacksize=0.1MB
+2014-06-30 22:06:20,642 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,642 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 815.140625
+2014-06-30 22:06:20,642 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.92578125
+2014-06-30 22:06:20,642 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,642 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,643 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,643 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,643 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,643 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,644 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,644 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,644 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,644 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,762 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,762 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,763 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,763 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,763 INFO                  general_mesh:92  |#@# numTriangles, 116
+2014-06-30 22:06:20,763 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,764 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,764 INFO                  general_mesh:375 |#@# aoi, '3.11867536227'
+2014-06-30 22:06:20,764 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,765 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,765 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,765 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,765 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,766 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,766 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,766 INFO                neighbour_mesh:195 |Resource usage: memory=815.1MB resident=78.0MB stacksize=0.1MB
+2014-06-30 22:06:20,766 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,766 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 815.140625
+2014-06-30 22:06:20,767 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 77.95703125
+2014-06-30 22:06:20,767 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,767 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,767 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,767 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,768 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,768 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,768 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,768 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,768 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,769 CRITICAL            generic_domain:355 |Domain: Done
+2014-06-30 22:06:20,889 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-06-30 22:06:20,890 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-06-30 22:06:20,890 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-06-30 22:06:20,891 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-06-30 22:06:20,891 INFO                  general_mesh:92  |#@# numTriangles, 123
+2014-06-30 22:06:20,891 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-06-30 22:06:20,892 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-06-30 22:06:20,892 INFO                  general_mesh:375 |#@# aoi, '3.12012706137'
+2014-06-30 22:06:20,892 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-06-30 22:06:20,893 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-06-30 22:06:20,893 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-06-30 22:06:20,893 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-06-30 22:06:20,893 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-06-30 22:06:20,894 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-06-30 22:06:20,894 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-30 22:06:20'
+2014-06-30 22:06:20,894 INFO                neighbour_mesh:195 |Resource usage: memory=815.1MB resident=78.0MB stacksize=0.1MB
+2014-06-30 22:06:20,894 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-06-30 22:06:20,894 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 815.140625
+2014-06-30 22:06:20,895 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 78.015625
+2014-06-30 22:06:20,895 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-06-30 22:06:20,895 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-06-30 22:06:20,895 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-06-30 22:06:20,895 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-06-30 22:06:20,896 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-06-30 22:06:20,896 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-06-30 22:06:20,896 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-06-30 22:06:20,896 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-06-30 22:06:20,896 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-06-30 22:06:20,896 CRITICAL            generic_domain:355 |Domain: Done
