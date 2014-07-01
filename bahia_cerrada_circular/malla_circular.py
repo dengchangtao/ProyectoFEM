@@ -37,7 +37,7 @@ for N in range(4,132,8):
   id1 = np.linspace(0,xy.shape[0],xy.shape[0]+1)
   lm = np.zeros(t.shape)
   for e in range(lm.shape[0]):
-    for a in range(2):
+    for a in range(3):
       A=t[e,a]    
       lm[e,a]=id1[A]
   np.savetxt('xyz%i.txt'%N,xy)
@@ -50,6 +50,6 @@ for N in range(4,132,8):
   plt.axis('equal')
   plt.axis('off')
   print t.shape,N
-  plt.title('N=%i, nel=%i'%(N,t.shape[0]))
+  plt.title('N=%i, nel=%i, nen=%i'%(N,t.shape[0],xy.shape[0]))
   plt.savefig('circulo%i.png'%N)
   plt.close()
