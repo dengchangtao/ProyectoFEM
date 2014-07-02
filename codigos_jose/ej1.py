@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from helmholtz import *
+import anuga
 h0=4./9.81
 c2=9.81*h0
 #omega=[2*3.14
-xyz,IEN,ID,LM=MeshDomain(20,21)
+xyz,IEN,ID,LM=MeshDomain(25,26)
 plt.triplot(xyz[:,0],xyz[:,1],IEN)
 #plt.show()
 
@@ -44,5 +45,5 @@ def plotmany(nind,iv,l,v):
     plt.title('n=%i\t l1=%.3f'%(iv[ind],w ) )
     plt.show()
 plotmany(5,iv1,l1,v1)
-plotmany(5,iv2,l2,v2) 
+#plotmany(5,iv2,l2,v2) 
 plotmany(15,iv3,l3,v3)

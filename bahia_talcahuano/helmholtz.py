@@ -54,7 +54,7 @@ def Tri3shp(xeset,Nhat,DNhat):
   N=Nhat  
   return xhat,N,DN,detJ
 
-def Tri3keHelmholtz(xeset,c2,k):
+def Tri3keHelmholtz(xeset,c2e,k):
   """
     Integra con precision k
     fe y ke, usando cuadratura de Gauss
@@ -68,16 +68,23 @@ def Tri3keHelmholtz(xeset,c2,k):
   """
   xq,wq= Tri3QGauss(k)
   nen=len(xeset)
-  ke=np.matrix(np.zeros((nen,nen)))  
+  ke=np.matrix(np.zeros((nen,nen))) 
   for iq in range(xq.shape[0]):
     Nhat,DNhat=Tri3NDhat([xq[iq,0],xq[iq,1]])
     xhat,N,DN,detJ=Tri3shp(xeset,Nhat,DNhat)
     B=np.matrix(DN).T
-    print '-------------B\n',B
-    print '----------kappa\n',c2
+    #print '-------------B\n',B
+    #print '----------kappa\n',c2
+    c2 = Tri3SquareCelerity(N,c2e)
     ke+=0.5*wq[iq]*B.T*c2*B*np.abs(detJ)
   return ke
-
+def Tri3SquareCelerity(N,c2e):
+  c2e = np.array(c2e)
+  c2 = 0.
+  for a in range(c2e.shape[0]):
+    c2+=N[a]*c2e[a]
+  return c2
+  
 def Tri3me(xeset,rho):
   """
     me = int( rho* outer( N(x(xi)), N(x(xi)))* detJ} )
@@ -165,7 +172,8 @@ def Tri3HelmholtzAssemble(xyz,IEN,LM,c2):
   F=np.zeros((neq,))
   for e in range(nel):
     xeset=np.array([xyz[i] for i in IEN[e,:]])
-    ke=Tri3keHelmholtz(xeset,c2,1)
+    c2e = np.array([c2[i] for i in IEN[e,:]])
+    ke=Tri3keHelmholtz(xeset,c2e,1)
     me = Tri3me(xeset,1.)
     for a in range(nen):
       A=LM[e,a]
@@ -176,3 +184,28 @@ def Tri3HelmholtzAssemble(xyz,IEN,LM,c2):
 	    K[A,B]+=ke[a,b]
 	    M[A,B]+=me[a,b]
   return np.matrix(K),np.matrix(M)
+
+def Tri3SolPlot(xyz,IEN,u,Ninterp):
+  #creo los xi de elemento isoparametrico
+  from scipy.interpolate import griddata
+  import numpy as np
+  import matplotlib.pyplot as plt
+  from matplotlib import cm
+  xi1=np.linspace(0,1.,Ninterp)
+  xi2=np.linspace(0,1.,Ninterp)
+  xi1,xi2=np.meshgrid(xi1,xi2)
+  for i in range(xi1.shape[1]):
+    xi2[:,i]=np.linspace(0.,1-xi1[0,i],Ninterp)
+  for e in range(IEN.shape[0]):
+    xeset=xyz[IEN[e,:],:]
+    ueset=u[IEN[e,:]]
+    x1=0.*xi1
+    x2=0.*xi2
+    for a1 in range(xi1.shape[0]):
+      for a2 in range(xi1.shape[1]):
+	Nhat, DNhat = Tri3NDhat([xi1[a1,a2],xi2[a1,a2]])
+	xhat,N,DN,detJ = Tri3shp(xeset, Nhat, DNhat)
+	x1[a1,a2]=xhat[0]
+	x2[a1,a2]=xhat[1]
+    uinterp=griddata(xeset,ueset,(x1,x2))
+    plt.pcolormesh(x1,x2,uinterp,vmin=u.min(),vmax=u.max(),cmap=cm.hsv)
