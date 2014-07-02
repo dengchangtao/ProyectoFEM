@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.3)  1 JUL 2014 20:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.3)  2 JUL 2014 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -366,7 +366,8 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen141
 \Gm@layoutvoffset=\dimen142
 \Gm@dimlist=\toks30
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
@@ -385,7 +386,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
 LaTeX Font Info:    ... okay on input line 94.
 \AtBeginShipoutBox=\box58
 Package hyperref Info: Link coloring OFF on input line 94.
-
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -397,8 +397,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 94.
 LaTeX Info: Redefining \pageref on input line 94.
 LaTeX Info: Redefining \nameref on input line 94.
-
-(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -470,7 +468,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figuras/LogoUC-BN.pdf, id=16, 122.77026pt x 161.83778pt>
+<./figuras/LogoUC-BN.pdf, id=4, 122.77026pt x 161.83778pt>
 File: ./figuras/LogoUC-BN.pdf Graphic file (type pdf)
 
 <use ./figuras/LogoUC-BN.pdf>
@@ -496,26 +494,58 @@ Overfull \hbox (13.88782pt too wide) in paragraph at lines 98--110
 
 LaTeX Warning: Citation `toro' on page 1 undefined on input line 1.
 
-<figs/variables.pdf, id=35, 170.71654pt x 85.35826pt>
+
+LaTeX Warning: Reference `fig:vars' on page 1 undefined on input line 24.
+
+<figs/variables.pdf, id=22, 170.71654pt x 85.35826pt>
 File: figs/variables.pdf Graphic file (type pdf)
  <use figs/variables.pdf>
-Package pdftex.def Info: figs/variables.pdf used on input line 32.
+Package pdftex.def Info: figs/variables.pdf used on input line 31.
 (pdftex.def)             Requested size: 284.52756pt x 142.28728pt.
+
+
+LaTeX Warning: Reference `eq:nswe_cart' on page 1 undefined on input line 36.
+
+
+LaTeX Warning: Reference `eq:nswe_cart' on page 1 undefined on input line 36.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 \end{align}
+l.52 \end{align}
                  [1]
 
-LaTeX Warning: Citation `nica' on page 2 undefined on input line 83.
+LaTeX Warning: Reference `swe' on page 2 undefined on input line 54.
 
-) (./variacional_galerkin.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.2}) has been already used, duplicate ignored
+
+LaTeX Warning: Reference `eqonda' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Reference `eqonda' on page 2 undefined on input line 71.
+
+
+LaTeX Warning: Reference `helmholtz' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `nica2011' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Reference `helmholtz' on page 2 undefined on input line 82.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3 \begin{align*}
-                   [2 <./figs/variables.pdf>]
+l.94 
+      [2 <./figs/variables.pdf>]) (./variacional_galerkin.tex
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ³ in font cmr10!
+
+
+LaTeX Warning: Reference `helmholtz' on page 3 undefined on input line 1.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  []
@@ -530,29 +560,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
- [3]
+ [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FA1867294D70BA753952E29EFB764EB3;229.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  FA1867294D70BA753952E29EFB764EB3;229.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  ) 
 Here is how much of TeX's memory you used:
- 8787 strings out of 494997
- 129219 string characters out of 3180092
- 238987 words of memory out of 3000000
- 11858 multiletter control sequences out of 15000+200000
+ 8780 strings out of 494997
+ 129156 string characters out of 3180092
+ 239230 words of memory out of 3000000
+ 11856 multiletter control sequences out of 15000+200000
  12708 words of font info for 48 fonts, out of 3000000 for 9000
  40 hyphenation exceptions out of 8191
- 36i,19n,38p,933b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,20n,38p,1118b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -561,19 +635,20 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (5 pages, 235840 bytes).
+lic/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (6 pages, 249909 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

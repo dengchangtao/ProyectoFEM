@@ -6,6 +6,8 @@ La condici\'on de borde por el lado que da hacia el oc\'eano no es trivial de im
 
 Dadas estas definiciones, los seis primeros modos de oscilaci\'on y los per\'iodos asociados se encuentran representados en la figura \ref{fig:modos_talcahuano}.
 
+
+
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{figuras/04bati+malla.png}

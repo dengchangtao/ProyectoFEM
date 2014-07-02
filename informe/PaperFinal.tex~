@@ -4,6 +4,8 @@
 \usepackage{amsmath, amsfonts, amssymb, amsthm} % Math stuff
 \usepackage{enumerate, array, multirow}
 
+\usepackage{caption}
+\usepackage{subcaption}
 %%%  Language Settings  %%%
 %\usepackage[spanish]{babel}  % Spanish language
 % \usepackage[applemac]{inputenc}  % Allows for accents!! Useful for spanish documents
@@ -22,34 +24,36 @@
 \maketitle
 
 \begin{abstract}
-    A menudo la propagaci\'on y superposici\'on de ondas en bah\'ias puede generar oscilaciones de per\'iodos largos que ocasionan inundaci\'on y da\~no inesperado en embarcaciones y estructuras, sin embargo, a partir de las ecuaciones de Navier-Stokes es posible deducir que, cuando estas ondas largas poseen pequeña amplitud, las frecuencias y modos de oscilación corresponden a los valores y vectores propios dados por la ecuación de Helmholtz. En este trabajo ha sido posible desarrollar una formulación variacional del problema, e implementar computacionalmente el método de Galerkin para calcular los modos de resonancia aproximados para una bah\'ia de geometría arbitraria. Ha sido posible validar con soluciones anal\'iticas y se ha aplicado el método para estudiar la bah\'ia de Talcahuano, Chile, encontrando que los períodos de oscilación son de orden de magnitud esperado y la forma de los modos principales concuerda con lo que se reporta en la literatura [CITA AL PAPER DE RESONANCIA].
+    A menudo la propagaci\'on y superposici\'on de ondas en bah\'ias puede generar oscilaciones de per\'iodos largos que ocasionan inundaci\'on y da\~no inesperado en embarcaciones y estructuras, sin embargo, a partir de las ecuaciones de Navier-Stokes es posible deducir que, cuando estas ondas largas poseen pequeña amplitud, las frecuencias y modos de oscilación corresponden a los valores y vectores propios dados por la ecuación de Helmholtz. En este trabajo ha sido posible desarrollar una formulación variacional del problema, e implementar computacionalmente el método de Galerkin para calcular los modos de resonancia aproximados para una bah\'ia de geometría arbitraria. Ha sido posible validar con soluciones anal\'iticas y se ha aplicado el método para estudiar la bah\'ia de Concepción, Chile, encontrando que los períodos de oscilación son de orden de magnitud esperado y la forma de los modos principales concuerda con lo que se reporta en la literatura \cite{Belloti2012}.
 \end{abstract}
 
 \section{Introducci\'on}
-La funci\'on de la secci\'on {\it Introducci\'on} es 
-\begin{itemize}
-	\item Establecer el contexto general de la investigaci\'on (ej: por qu\'e es importante/interesante resolver problemas del tipo que usted resuelve). Generalmente comprende un estudio de la literatura existente que motivaron y sobre la que se basa la investigaci\'on, no olvide incluir citas en esta secci\'on (m\'inimamente aquellas incluidas en su propuesta).
-	\item Describir claramente el objetivo principal de la investigaci\'on, incluyendo objetivos espec\'ificos, hip\'otesis empleadas, y los problemas que se quieren resolver o las preguntas que gu\'ian a investigaci\'on.
-	\item Explique (sin entrar en detalles demasiado t\'ecnicos) como abordar\'a el problema a investigar. Un punto de partida es la metodolog\'ia entregada en la propuesta de investigaci\'on.
-\end{itemize}
-No olvide en esta secci\'on citar a los autores y sus trabajos relevantes para su proyecto (en {\LaTeX} las citas se hace con el comando {\tt \textbackslash cite{}}, por ejemplo, \cite{hughes2000} y  \cite{goktepekuhl2009}. En particular, este {\it template} se inspir\'o en la referencia \cite{riceweb}.
+
+El fen\'omeno de resonancia al interior de una regi\'on  semicerrada reviste una especial importancia en el estudio del comportamiento de ondas que se propagan desde el oc\'eano hacia zonas costeras y que pueden inducir la amplificaci\'on de estas al ingresar a una regi\'on semicerrada \cite{Kowalik1993}. El fen\'omeno de resonancia puede condicionar el diseño de puertos y comportamiento de naves al interior de estos \cite{Diaz2006web}, la inundaci\'on por efecto de tormentas y marejadas \cite{Kowalik1993} y en la amplificaci\'on y/o aparici\'on de ondas de tsunami tard\'ia, horas despu\'es de la llegada de la primera onda \cite{Kowalik1993}. Esta \'ultima podría ser una explicaci\'on para describir las caracter\'isticas que tuvo el tsunami de Maule 2010 \cite{Cyper2012web}.
+
+Existen varias formas de aproximarse a una identificaci\'on y cuantificaci\'on de los modos propios de oscilaci\'on al interior de una bah\'ia. Una aproximaci\'on es propagar varias ondas (distinta frecuencia y direcci\'on) hacia el interior y cuantificar la amplificaci\'on de estas. Esta propagaci\'on puede ser lineal o no lineal \cite{Mei2005}. Otra aproximaci\'on consiste en calcular directamente los modos propios de oscilaci\'on de la ba\'hia \cite{Belloti2012, Mei2005}. Esta \'ultima aproxiamci\'on es la utilizada en este trabajo.
+
+El objetivo de este trabajo es determinar los modos de oscilaci\'on de una bah\'ia utilizando una aproximaci\'on por elementos finitos. La mayor dificultad que presenta una aproximaci\'on directa para la determinaci\'on de los modos propios es la seleccionar una condici\'on de borde apropiada a cada caso \cite{Mei2005, Rabino2009}. Como una primera aproxiamci\'on se considerar\'a una bah\'ia cerrada.
+
+Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz, mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumman $u,_i  n_i = 0$. Las ecuaci\'on de Helmholtz es derivada de la ecuacion de Navier-Stokes y presentada en su formualci\'on fuerte. Se obtiene la formulaci\'on variacional y galerkin asociada al problema fuerte y se implementan elementos tipo tri3 para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y alicado al caso real de la Bah\'ia de Talcahuano
+
 
 \section{Marco Te\'orico}
   \subsection{Ecuaciones fundamentales}
   \input{fuerte.tex}
   \subsection{Formulaci\'on variacional y de Galerkin}
   \input{variacional_galerkin.tex}
-  \subsection{Comentarios sobre la implementaci\'on y convergencia del m\'etodo}
-\section{Validaci\'on del modelo}
-  \input{validacion.tex}
 \section{Resultados}
+  \input{validacion.tex}
+  \input{casotalcahuano.tex}
   \input{resultados.tex}
-En esta secci\'on usted debe presentar los resultados obtenidos de su investigaci\'on, en una secuencia l\'ogica. En esta secci\'on usted NO debe interpretar los resultados ni concluir algo a partir de estos. Sin embargo, si puede destacar algunos resultados importantes (por ejemplo, {\it es importante notar que el valor del estiramiento principal mayor alcanzan valores sobre 1.5, que corresponden a una deformaci\'on axial del 50 \%}) que ser\'an el punto de partida de sus conclusiones en la secci\'on de discusi\'on. Los gr\'aficos deben ser confeccionados con mucha atenci\'on, de manera de ser muy claros y no tener demasiada informaci\'on que dificulte leerlos. Sin embargo, sea elegante y eficiente, y no genere gr\'aficos que no reporten informaci\'on importante. No olvide agregar leyendas para las figuras (con el comando {\tt \textbackslash caption}) que ayuden la compresi\'on de estas (no repita informaci\'on en el texto principal). Para un ejemplo, vea la figura \ref{fig:tvconv}.
+%En esta secci\'on usted debe presentar los resultados obtenidos de su investigaci\'on, en una secuencia l\'ogica. En esta secci\'on usted NO debe interpretar los resultados ni concluir algo a partir de estos. Sin embargo, si puede destacar algunos resultados importantes (por ejemplo, {\it es importante notar que el valor del estiramiento principal mayor alcanzan valores sobre 1.5, que corresponden a una deformaci\'on axial del 50 \%}) que ser\'an el punto de partida de sus conclusiones en la secci\'on de discusi\'on. Los gr\'aficos deben ser confeccionados con mucha atenci\'on, de manera de ser muy claros y no tener demasiada informaci\'on que dificulte leerlos. Sin embargo, sea elegante y eficiente, y no genere gr\'aficos que no reporten informaci\'on importante. No olvide agregar leyendas para las figuras (con el comando {\tt \textbackslash caption}) que ayuden la compresi\'on de estas (no repita informaci\'on en el texto principal). Para un ejemplo, vea la figura \ref{fig:tvconv}.
 
 
 
 \section{Discusion}
-En esta secci\'on usted debe interpretar sus resultados presentados en la secci\'on anterior, y compararlos/contrastarlos con resultados conocidos previamente en otros art\'iculos o libros. Lo anterior le permitir\'a generar conclusiones a partir de la interpretaci\'on de sus resultados. Sea claro en los pasos de su razonamiento que lo llevan a sus conclusiones. La secci\'on de discusi\'on debe responder las preguntas o verificar las hip\'otesis planteadas en la secci\'on de {\it introducci\'on}. Es recomendable tambi\'en incluir en la discusi\'on cuales son las limitantes de su investigaci\'on, y c\'omo pueden afectar los resultados y conclusiones obtenidas. Finalmente, es recomendable incluir posibles ideas \'o proyectos futuros que nacen a ra\'iz del trabajo de investigaci\'on presentado en el art\'iculo.
+
+%En esta secci\'on usted debe interpretar sus resultados presentados en la secci\'on anterior, y compararlos/contrastarlos con resultados conocidos previamente en otros art\'iculos o libros. Lo anterior le permitir\'a generar conclusiones a partir de la interpretaci\'on de sus resultados. Sea claro en los pasos de su razonamiento que lo llevan a sus conclusiones. La secci\'on de discusi\'on debe responder las preguntas o verificar las hip\'otesis planteadas en la secci\'on de {\it introducci\'on}. Es recomendable tambi\'en incluir en la discusi\'on cuales son las limitantes de su investigaci\'on, y c\'omo pueden afectar los resultados y conclusiones obtenidas. Finalmente, es recomendable incluir posibles ideas \'o proyectos futuros que nacen a ra\'iz del trabajo de investigaci\'on presentado en el art\'iculo.
 
 
 \begin{thebibliography}{10}
@@ -66,6 +70,25 @@ En esta secci\'on usted debe interpretar sus resultados presentados en la secci\
 
 \bibitem{goktepekuhl2009}
 	S. G\"{o}ktepe and E. Kuhl.Computational modeling of cardiac electrophysiology: A novel finite element approach. \emph{International Journal for Numerical Methods in Engineering} 2009; {\bf 79}, 156--178.
+	
+\bibitem{Kowalik1993}
+	Z. Kowalik and T.S. Murty. \emph{Numerical modeling of ocean dynamics. Advanced Series.on Ocean Engineering, vol. 5. }World Scientific, Singapore. 1993; 
+	
+\bibitem{Mei2005}
+	C. Mei, M. Stiassnie and D. Yue \emph{Theory and applicaction of suface ocean Waves, vol. 5. }World Scientific, Singapore. 2005; 
+
+\bibitem{Diaz2006web} {\tt http://www.tdx.cat/bitstream/handle/10803/10618/}
+
+\bibitem{Cyper2012web} {\tt http://ciperchile.cl/2012/01/18/tsunami-paso-a-paso-los-escandalosos-errores-y-omisiones-del-shoa-y-la-onemi/
+}
+
+\bibitem{Belloti2012}
+	Belloti et al.Modal analysis of semi-enclosed basins. \emph{Coastal Engineering} 2012; {\bf 64}, 16--25.
+
+\bibitem{Rabino2009}
+	A.B. Rabinovich. Seiches and harbor oscillations. \emph{Handbook of coastal and ocean engineering. World Scientific Publ} 2009; {\bf 64}, 193--236.
+
+
 
 \end{thebibliography}
 
