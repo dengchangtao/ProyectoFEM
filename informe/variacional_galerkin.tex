@@ -1,4 +1,5 @@
-La formulaci\'on fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
+\subsection{Formulacion variacional y ecuaci\'on matricial}
+La formulación fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
 
 \begin{align*}
 \text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$ tal que:}\\
@@ -38,13 +39,63 @@ a(v, u) - \omega^2 (v, u) = 0 \ \ \ \ \  & (W) \\
 
 Formulaci\'on Galerkin:
 
-Sean $u^h \in \mathcal{S}^h \left(\equiv \mathcal{V}^h \right)$ con $\mathcal{V}^h \in \mathcal{V}$
+Sean $u^h \in \mathcal{S}^h \left( \equiv \mathcal{V}^h \right)$ con $\mathcal{V}^h \in \mathcal{V}$
 
 entonces:
 
 $$ a(v^h, u^h) - \omega^2 (v^h, u^h) = 0 $$
 
 Luego la formulaci\'on galerkin queda:
+
+\begin{align*}
+\text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$, $u \in \mathcal{V}^h $, $\omega \in \mathbb{R}$, tal que:}\\
+a(v^h, u^h) - \omega^2 (v^h, u^h) = 0 \ \ \ \ \  & (W) \\
+\end{align*}
+
+Para hallar las ecuaciones matriciales asociadas, debemos expresar $v^h$ y $u^h$ en t\'erminos de las funciones de forma $N(\boldsymbol{x})$:
+
+$$v^h = \sum_{A \in \eta}N_A(\boldsymbol{x})v_A$$
+$$u^h = \sum_{A \in \eta}N_A(\boldsymbol{x})u_A$$
+
+donde 
+$\eta$: Nodos del dominio\\
+
+Reemplazando, se tiene:
+
+\begin{equation*}
+\begin{split}
+\sum_{A \in \eta} v_A 
+\left \{
+\sum_{B \in \eta}(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B - 
+\omega^2 \sum_{B \in \eta} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B 
+\right \} = 0
+\end{split}
+\end{equation*}
+
+Como $v_A \neq 0$, entonces:
+$$\left( \sum_{B \in \eta}(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) - 
+\omega^2 \sum_{B \in \eta} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x}))\right) u_B =0 $$
+
+Luego, el problema matricial queda:
+
+$$(M - \omega^2 K)\boldsymbol{u_B} = 0$$
+
+donde:\\
+
+$K_{AB} = a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} gh N_A,_i(\boldsymbol{x}) N_B,_j(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+$M_{AB} = (N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} N_A(\boldsymbol{x}) N_B(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+A nivel de elemento:\\
+
+$K_{ab} = a(N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} gh N_a,_i(\boldsymbol{x}) N_b,_j(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+$M_{ab} = (N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} N_a(\boldsymbol{x}) N_b(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+El tipo de elemento particular utilizado se explica en la secci\'on de implementaci\'on
+
+
+
 
 
 
