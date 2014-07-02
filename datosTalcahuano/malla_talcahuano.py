@@ -17,9 +17,9 @@ z = mat['zh'][0,4]
 plt.figure()
 plt.pcolormesh(x,y,z,cmap=cm.gist_earth)
 plt.axis('equal')
-plt.axis('off')
+#plt.axis('off')
 plt.savefig('00bati_original.png',bbox_inches='tight',dpi=300)
-plt.axis('off')
+#plt.axis('off')
 plt.close()
 
 #--------la malla-----------
@@ -52,11 +52,14 @@ b=np.array(b)
 
 plt.figure()
 plt.pcolormesh(x,y,z,cmap=cm.gist_earth)
+plt.colorbar()
 plt.plot(b[:,0],b[:,1])
 plt.contour(x,y,z,[0.],colors='w')
 plt.axis('equal')
-plt.axis('off')
+#plt.axis('off')
+
 plt.savefig('01bati_original+extent+curva0.png',bbox_inches='tight',dpi=300)
+
 plt.close()
 
 bounding_polygon=b[:-1,:]
@@ -118,7 +121,7 @@ plt.pcolormesh(x-b[:,0].min(),y-b[:,1].min(),z,cmap=cm.gray)
 plt.tripcolor(xt,yt,t,zt,cmap=cm.gist_earth)
 plt.contour(x-b[:,0].min(),y-b[:,1].min(),z,[0.],colors='w')
 plt.axis('equal')
-plt.axis('off')
+#plt.axis('off')
 plt.savefig('02bati+batitriangular.png',bbox_inches='tight',dpi=300)
 plt.close()
 
@@ -133,7 +136,7 @@ plt.close()
 #pero no son de la bah\'ia, sino de la playa
 nodosmalos=[14,25,167,166,175,123,74,3373,3383,157,130,116,153,3470,\
   1284,1218,1016,956,970,1119,1009,1122,1123,1124,1479,1411,1685,1997,\
-  1224,1994,1636,2827]
+  1224,1994,1636,2827,3070,2953,2974,4768,4744,4733,3366,2968]
 nodosbuenos=[]
 p=-1
 idm=-1*np.ones(xt.shape,dtype=int)
@@ -167,12 +170,13 @@ plt.scatter(xt[otrosnodos],yt[otrosnodos],s=1.,edgecolor='none',facecolor='b')
 plt.axis('equal')
 plt.savefig('03bati_gdl.png',dpi=300)
 plt.close()
-plt.figure()
+plt.figure(figsize=(24,24))
 for a in range(xt.shape[0]):
   if idm[a]>-1:
-    plt.text(xt[a],yt[a],'n%i'%a,fontsize=12)    
+    plt.text(xt[a],yt[a],'n%i'%a,fontsize=8)    
 plt.tripcolor(xt,yt,t[indices,:],zt)
 plt.triplot(xt,yt,t[indices,:],linewidth=0.1)
+plt.savefig('nodos+text.png',dpi=300)
 plt.close()
 
 plt.figure()
@@ -181,7 +185,7 @@ plt.pcolormesh(x-b[:,0].min(),y-b[:,1].min(),z,cmap=cm.gist_earth)
 plt.contour(x-b[:,0].min(),y-b[:,1].min(),z,[0.],colors='w')
 plt.triplot(xt,yt,t[criterio4],linewidth=0.3)
 plt.axis('equal')
-plt.axis('off')
+#plt.axis('off')
 plt.savefig('04bati+malla.png',bbox_inches='tight',dpi=300)
 plt.close()
 

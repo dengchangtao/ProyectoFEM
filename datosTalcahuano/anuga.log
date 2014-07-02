@@ -1,81 +1,81 @@
-2014-06-23 00:03:26,813 INFO           anuga.utilities.log:0   |Logfile is './anuga.log' with logging level of INFO, console logging level is CRITICAL
-2014-06-23 00:03:26,815 INFO                mesh_interface:90  |Resource usage: memory=890.9MB resident=221.3MB stacksize=0.1MB
-2014-06-23 00:03:26,815 INFO                mesh_interface:90  |#@# sys_platform, linux2
-2014-06-23 00:03:26,816 INFO                mesh_interface:90  |#@# start_memory, 890.90625
-2014-06-23 00:03:26,816 INFO                mesh_interface:90  |#@# start_resident, 221.359375
-2014-06-23 00:03:26,816 INFO                mesh_interface:90  |#@# start_stacksize, 0.13671875
-2014-06-23 00:03:26,816 INFO                mesh_interface:91  |#@# maximum_triangle_area, 57600
-2014-06-23 00:03:26,816 INFO                mesh_interface:92  |#@# minimum_triangle_angle, 28.0
-2014-06-23 00:03:26,817 INFO                mesh_interface:93  |#@# startMesh, '2014-06-23 00:03:26'
-2014-06-23 00:03:26,817 CRITICAL            mesh_interface:174 |WARNING: Segment 4 was not assigned a boundary_tag.Default tag "exterior" will be assigned to missing segment
-2014-06-23 00:03:26,817 CRITICAL            mesh_interface:174 |WARNING: Segment 5 was not assigned a boundary_tag.Default tag "exterior" will be assigned to missing segment
-2014-06-23 00:03:26,818 CRITICAL            mesh_interface:355 |Generating mesh to file 'talcahuano4.msh'
-2014-06-23 00:03:27,376 CRITICAL                   caching:839 |Caching: looking for cached files /home/jose/.python_cache/_convert_dem_from_ascii2netcdf[-2652201026722842313]_{Result,Args,Admin}.z
-2014-06-23 00:03:27,377 CRITICAL                   caching:845 |Caching: Dependencies are ['talcahuano4.asc', 'talcahuano4.prj']
-2014-06-23 00:03:27,378 CRITICAL                   caching:887 |Dependencies ['talcahuano4.asc', 'talcahuano4.prj'] have changed - recomputing
-2014-06-23 00:03:27,379 CRITICAL                   caching:2406|+-----------------------------------------------------------------------------
-| Mon Jun 23 00:03:27 2014. Evaluating function _convert_dem_from_ascii2netcdf
+2014-07-01 18:09:33,924 INFO           anuga.utilities.log:0   |Logfile is './anuga.log' with logging level of INFO, console logging level is CRITICAL
+2014-07-01 18:09:33,924 INFO                mesh_interface:90  |Resource usage: memory=877.2MB resident=207.7MB stacksize=0.1MB
+2014-07-01 18:09:33,925 INFO                mesh_interface:90  |#@# sys_platform, linux2
+2014-07-01 18:09:33,925 INFO                mesh_interface:90  |#@# start_memory, 877.25390625
+2014-07-01 18:09:33,925 INFO                mesh_interface:90  |#@# start_resident, 207.7421875
+2014-07-01 18:09:33,925 INFO                mesh_interface:90  |#@# start_stacksize, 0.13671875
+2014-07-01 18:09:33,925 INFO                mesh_interface:91  |#@# maximum_triangle_area, 57600
+2014-07-01 18:09:33,925 INFO                mesh_interface:92  |#@# minimum_triangle_angle, 28.0
+2014-07-01 18:09:33,925 INFO                mesh_interface:93  |#@# startMesh, '2014-07-01 18:09:33'
+2014-07-01 18:09:33,926 CRITICAL            mesh_interface:174 |WARNING: Segment 4 was not assigned a boundary_tag.Default tag "exterior" will be assigned to missing segment
+2014-07-01 18:09:33,926 CRITICAL            mesh_interface:174 |WARNING: Segment 5 was not assigned a boundary_tag.Default tag "exterior" will be assigned to missing segment
+2014-07-01 18:09:33,926 CRITICAL            mesh_interface:355 |Generating mesh to file 'talcahuano4.msh'
+2014-07-01 18:09:34,748 CRITICAL                   caching:839 |Caching: looking for cached files /home/jose/.python_cache/_convert_dem_from_ascii2netcdf[-2652201026722842313]_{Result,Args,Admin}.z
+2014-07-01 18:09:34,749 CRITICAL                   caching:845 |Caching: Dependencies are ['talcahuano4.asc', 'talcahuano4.prj']
+2014-07-01 18:09:34,750 CRITICAL                   caching:887 |Dependencies ['talcahuano4.asc', 'talcahuano4.prj'] have changed - recomputing
+2014-07-01 18:09:34,750 CRITICAL                   caching:2406|+-----------------------------------------------------------------------------
+| Tue Jul  1 18:09:34 2014. Evaluating function _convert_dem_from_ascii2netcdf
 +-----------------------------------------------------------------------------
 
-2014-06-23 00:03:27,380 CRITICAL                   caching:2351|| Argument:     'talcahuano4.asc'
-2014-06-23 00:03:27,380 CRITICAL                   caching:2363|| Keyword Args: {'name_out': None, 'verbose': True}
-2014-06-23 00:03:27,381 CRITICAL                   caching:2385|| Reason:       Dependencies have changed
-2014-06-23 00:03:27,381 CRITICAL                   caching:2419|+-----------------------------------------------------------------------------
+2014-07-01 18:09:34,750 CRITICAL                   caching:2351|| Argument:     'talcahuano4.asc'
+2014-07-01 18:09:34,751 CRITICAL                   caching:2363|| Keyword Args: {'name_out': None, 'verbose': True}
+2014-07-01 18:09:34,751 CRITICAL                   caching:2385|| Reason:       Dependencies have changed
+2014-07-01 18:09:34,751 CRITICAL                   caching:2419|+-----------------------------------------------------------------------------
 
-2014-06-23 00:03:27,382 CRITICAL                   asc2dem:71  |Reading METADATA from talcahuano4.prj
-2014-06-23 00:03:27,383 CRITICAL                   asc2dem:115 |Reading DEM from talcahuano4.asc
-2014-06-23 00:03:27,386 CRITICAL                   asc2dem:120 |Got 654 lines
-2014-06-23 00:03:27,387 CRITICAL                   asc2dem:158 |Store to NetCDF file talcahuano4.dem
-2014-06-23 00:03:27,640 CRITICAL                   caching:2406|+-------------------------------------------------------
-| Mon Jun 23 00:03:27 2014. Caching statistics (storing)
+2014-07-01 18:09:34,752 CRITICAL                   asc2dem:71  |Reading METADATA from talcahuano4.prj
+2014-07-01 18:09:34,752 CRITICAL                   asc2dem:115 |Reading DEM from talcahuano4.asc
+2014-07-01 18:09:34,756 CRITICAL                   asc2dem:120 |Got 654 lines
+2014-07-01 18:09:34,757 CRITICAL                   asc2dem:158 |Store to NetCDF file talcahuano4.dem
+2014-07-01 18:09:35,066 CRITICAL                   caching:2406|+-------------------------------------------------------
+| Tue Jul  1 18:09:35 2014. Caching statistics (storing)
 +-------------------------------------------------------
 
-2014-06-23 00:03:27,640 CRITICAL                   caching:2332|| Function:     _convert_dem_from_ascii2netcdf
-2014-06-23 00:03:27,641 CRITICAL                   caching:2351|| Argument:     'talcahuano4.asc'
-2014-06-23 00:03:27,641 CRITICAL                   caching:2363|| Keyword Args: {'name_out': None, 'verbose': True}
-2014-06-23 00:03:27,641 CRITICAL                   caching:2385|| Reason:       Dependencies have changed
-2014-06-23 00:03:27,641 CRITICAL                   caching:2222|| CPU time:     0.26 seconds
-2014-06-23 00:03:27,644 CRITICAL                   caching:2235|| Loading time: 0.0 seconds (estimated)
-2014-06-23 00:03:27,645 CRITICAL                   caching:2274||
-2014-06-23 00:03:27,645 CRITICAL                   caching:2275|| Caching dir:  /home/jose/.python_cache/
-2014-06-23 00:03:27,645 CRITICAL                   caching:2288|| Result file:  _convert_dem_from_ascii2netcdf[-2652201026722842313]_Result.z(10 bytes, compressed)
-2014-06-23 00:03:27,645 CRITICAL                   caching:2288|| Args file:    _convert_dem_from_ascii2netcdf[-2652201026722842313]_Args.z(68 bytes, compressed)
-2014-06-23 00:03:27,645 CRITICAL                   caching:2288|| Admin file:   _convert_dem_from_ascii2netcdf[-2652201026722842313]_Admin.z(1205 bytes, compressed)
-2014-06-23 00:03:27,645 CRITICAL                   caching:2290||
-2014-06-23 00:03:27,646 CRITICAL                   caching:2292|| Dependencies:  
-2014-06-23 00:03:27,646 CRITICAL                   caching:2317|| talcahuano4.asc: Mon Jun 23 00:03:27 2014 4990102 bytes
-2014-06-23 00:03:27,646 CRITICAL                   caching:2317|| talcahuano4.prj: Mon Jun 23 00:03:26 2014     168 bytes
-2014-06-23 00:03:27,646 CRITICAL                   caching:2419|+-------------------------------------------------------
+2014-07-01 18:09:35,066 CRITICAL                   caching:2332|| Function:     _convert_dem_from_ascii2netcdf
+2014-07-01 18:09:35,067 CRITICAL                   caching:2351|| Argument:     'talcahuano4.asc'
+2014-07-01 18:09:35,067 CRITICAL                   caching:2363|| Keyword Args: {'name_out': None, 'verbose': True}
+2014-07-01 18:09:35,067 CRITICAL                   caching:2385|| Reason:       Dependencies have changed
+2014-07-01 18:09:35,068 CRITICAL                   caching:2222|| CPU time:     0.31 seconds
+2014-07-01 18:09:35,070 CRITICAL                   caching:2235|| Loading time: 0.0 seconds (estimated)
+2014-07-01 18:09:35,070 CRITICAL                   caching:2274||
+2014-07-01 18:09:35,071 CRITICAL                   caching:2275|| Caching dir:  /home/jose/.python_cache/
+2014-07-01 18:09:35,071 CRITICAL                   caching:2288|| Result file:  _convert_dem_from_ascii2netcdf[-2652201026722842313]_Result.z(10 bytes, compressed)
+2014-07-01 18:09:35,071 CRITICAL                   caching:2288|| Args file:    _convert_dem_from_ascii2netcdf[-2652201026722842313]_Args.z(68 bytes, compressed)
+2014-07-01 18:09:35,071 CRITICAL                   caching:2288|| Admin file:   _convert_dem_from_ascii2netcdf[-2652201026722842313]_Admin.z(1209 bytes, compressed)
+2014-07-01 18:09:35,072 CRITICAL                   caching:2290||
+2014-07-01 18:09:35,072 CRITICAL                   caching:2292|| Dependencies:  
+2014-07-01 18:09:35,072 CRITICAL                   caching:2317|| talcahuano4.asc: Tue Jul  1 18:09:34 2014 4990102 bytes
+2014-07-01 18:09:35,073 CRITICAL                   caching:2317|| talcahuano4.prj: Tue Jul  1 18:09:33 2014     168 bytes
+2014-07-01 18:09:35,073 CRITICAL                   caching:2419|+-------------------------------------------------------
 
-2014-06-23 00:03:27,754 CRITICAL            generic_domain:76  |Domain: Initialising
-2014-06-23 00:03:27,754 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
-2014-06-23 00:03:27,781 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
-2014-06-23 00:03:27,783 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
-2014-06-23 00:03:27,783 INFO                  general_mesh:92  |#@# numTriangles, 9393
-2014-06-23 00:03:27,788 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
-2014-06-23 00:03:27,793 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
-2014-06-23 00:03:27,795 INFO                  general_mesh:375 |#@# aoi, '350123650.0'
-2014-06-23 00:03:27,796 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
-2014-06-23 00:03:27,796 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
-2014-06-23 00:03:27,826 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
-2014-06-23 00:03:27,826 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
-2014-06-23 00:03:27,830 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
-2014-06-23 00:03:27,835 CRITICAL            neighbour_mesh:193 |Mesh: Done
-2014-06-23 00:03:27,835 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-06-23 00:03:27'
-2014-06-23 00:03:27,836 INFO                neighbour_mesh:195 |Resource usage: memory=964.6MB resident=223.8MB stacksize=0.1MB
-2014-06-23 00:03:27,836 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
-2014-06-23 00:03:27,836 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 964.55078125
-2014-06-23 00:03:27,837 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 223.81640625
-2014-06-23 00:03:27,837 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
-2014-06-23 00:03:27,837 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
-2014-06-23 00:03:27,837 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
-2014-06-23 00:03:27,838 CRITICAL            generic_domain:170 |Domain: Build Quantities
-2014-06-23 00:03:27,843 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
-2014-06-23 00:03:27,843 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
-2014-06-23 00:03:27,845 CRITICAL            generic_domain:281 |Domain: Set defaults
-2014-06-23 00:03:27,845 CRITICAL            generic_domain:336 |Domain: Set work arrays
-2014-06-23 00:03:27,845 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
-2014-06-23 00:03:27,846 CRITICAL            generic_domain:355 |Domain: Done
-2014-06-23 00:03:27,913 CRITICAL             geo_reference:188 |WARNING: Units of METERS specified.
-2014-06-23 00:03:27,913 CRITICAL             geo_reference:189 |Default units is m.
-2014-06-23 00:03:27,914 CRITICAL             geo_reference:190 |ANUGA does not correct for differences in units.
+2014-07-01 18:09:35,235 CRITICAL            generic_domain:76  |Domain: Initialising
+2014-07-01 18:09:35,235 CRITICAL              pmesh2domain:93  |Pmesh_to_Domain: Initialising
+2014-07-01 18:09:35,261 CRITICAL              pmesh2domain:103 |Pmesh_to_Domain: Done
+2014-07-01 18:09:35,262 CRITICAL              general_mesh:85  |General_mesh: Building basic mesh structure
+2014-07-01 18:09:35,263 INFO                  general_mesh:92  |#@# numTriangles, 9393
+2014-07-01 18:09:35,269 CRITICAL              general_mesh:147 |General_mesh: Computing areas, normals, edgelengths, centroids and radii
+2014-07-01 18:09:35,274 CRITICAL              general_mesh:372 |General Mesh: Building inverted triangle structure
+2014-07-01 18:09:35,276 INFO                  general_mesh:375 |#@# aoi, '350123650.0'
+2014-07-01 18:09:35,276 CRITICAL            neighbour_mesh:90  |Mesh: Initialising
+2014-07-01 18:09:35,277 CRITICAL            neighbour_mesh:160 |Mesh: Building neigbour structure
+2014-07-01 18:09:35,298 CRITICAL            neighbour_mesh:164 |Mesh: Building surrogate neigbour structure
+2014-07-01 18:09:35,298 CRITICAL            neighbour_mesh:168 |Mesh: Building boundary dictionary
+2014-07-01 18:09:35,299 CRITICAL            neighbour_mesh:175 |Mesh: Building tagged elements dictionary
+2014-07-01 18:09:35,302 CRITICAL            neighbour_mesh:193 |Mesh: Done
+2014-07-01 18:09:35,302 INFO                neighbour_mesh:194 |#@# finishMesh, '2014-07-01 18:09:35'
+2014-07-01 18:09:35,303 INFO                neighbour_mesh:195 |Resource usage: memory=950.9MB resident=210.2MB stacksize=0.1MB
+2014-07-01 18:09:35,303 INFO                neighbour_mesh:195 |#@# sys_platform, linux2
+2014-07-01 18:09:35,303 INFO                neighbour_mesh:195 |#@# finishMesh_memory, 950.8984375
+2014-07-01 18:09:35,303 INFO                neighbour_mesh:195 |#@# finishMesh_resident, 210.19921875
+2014-07-01 18:09:35,303 INFO                neighbour_mesh:195 |#@# finishMesh_stacksize, 0.13671875
+2014-07-01 18:09:35,304 CRITICAL            generic_domain:109 |Domain: Expose mesh attributes
+2014-07-01 18:09:35,304 CRITICAL            generic_domain:144 |Domain: Expose quantity names and types
+2014-07-01 18:09:35,304 CRITICAL            generic_domain:170 |Domain: Build Quantities
+2014-07-01 18:09:35,307 CRITICAL            generic_domain:213 |Domain: Set up communication buffers 
+2014-07-01 18:09:35,308 CRITICAL            generic_domain:228 |Domain: Set up triangle/node full flags 
+2014-07-01 18:09:35,309 CRITICAL            generic_domain:281 |Domain: Set defaults
+2014-07-01 18:09:35,309 CRITICAL            generic_domain:336 |Domain: Set work arrays
+2014-07-01 18:09:35,309 CRITICAL            generic_domain:352 |Domain: Initialising quantity values
+2014-07-01 18:09:35,309 CRITICAL            generic_domain:355 |Domain: Done
+2014-07-01 18:09:35,376 CRITICAL             geo_reference:188 |WARNING: Units of METERS specified.
+2014-07-01 18:09:35,376 CRITICAL             geo_reference:189 |Default units is m.
+2014-07-01 18:09:35,377 CRITICAL             geo_reference:190 |ANUGA does not correct for differences in units.

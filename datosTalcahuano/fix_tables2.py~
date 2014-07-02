@@ -1,0 +1,50 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+ien = np.loadtxt('ien2.txt')
+Id = np.loadtxt('id2.txt')
+xyz = np.loadtxt('xyz2.txt')
+
+todelete=np.array([2688, 994, 2041, 986, 187, 188],dtype=int)
+
+xyz2 = np.delete(xyz,todelete,axis=0)
+plt.triplot(xyz[:,0],xyz[:,1],ien,linewidth=0.5)
+plt.scatter(xyz2[:,0],xyz2[:,1],color='r')
+for i in range(todelete.shape[0]):
+  k = todelete[i]
+  plt.text(xyz[k,0],xyz[k,1],'%i'%Id[k])
+
+#creo una tbla de 'transformacion'
+# X_1[i] =  X_2[ T[j] ]
+T=-1*np.ones((xyz.shape[0],),dtype=int)
+j=-1
+for i in range(xyz.shape[0]):
+  if Id[i] != -1:
+    j+=1
+    T[i]=j
+#creo
+ien2 = -1*np.ones(ien.shape)
+
+#todel:p
+todel=[]
+for e in range(ien2.shape[0]):
+  for a in range(ien2[e,:].shape[0]):
+    ien2[e,a] = T[ien[e,a]]
+  if np.any(ien2[e,:] == -1):
+      todel.append(e)
+ien2 = np.delete(ien2,todel,axis=0)
+
+id2 = np.linspace(0,xyz2.shape[0]-1,xyz2.shape[0],dtype=int)
+lm2 = np.zeros(ien2.shape,dtype=int)
+for e in range(lm2.shape[0]):
+  for a in range(3):
+    A=ien2[e,a]    
+    lm2[e,a]=id2[A]
+np.savetxt('xyz3.txt',xyz2)
+np.savetxt('ien3.txt',ien2)
+np.savetxt('id3.txt',id2)
+np.savetxt('lm3.txt',lm2)
+
+
+plt.tripcolor(xyz2[:,0],xyz2[:,1],ien2,xyz2[:,2],cmap=cm.gist_earth)
+plt.triplot(xyz2[:,0],xyz2[:,1],ien2)
