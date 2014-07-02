@@ -1,4 +1,3 @@
-\subsection{Formulacion variacional y ecuaci\'on matricial}
 La formulación fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
 
 \begin{align*}
@@ -82,17 +81,17 @@ $$(M - \omega^2 K)\boldsymbol{u_B} = 0$$
 
 donde:\\
 
-$K_{AB} = a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} gh N_A,_i(\boldsymbol{x}) N_B,_j(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+$K_{AB} = a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} gh N_A,_i(\boldsymbol{x}) N_B,_i(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
 
 $M_{AB} = (N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} N_A(\boldsymbol{x}) N_B(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
 
 A nivel de elemento:\\
 
-$K_{ab} = a(N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} gh N_a,_i(\boldsymbol{x}) N_b,_j(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+$K_{ab} = a(N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} gh N_a,_i(\boldsymbol{x}) N_b,_i(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
 
 $M_{ab} = (N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} N_a(\boldsymbol{x}) N_b(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
 
-El tipo de elemento particular utilizado se explica en la secci\'on de implementaci\'on
+Los elementos utilizados en este estudio fueron elementos isoparam\'etricos Tri3. 
 
 
 

@@ -16,3 +16,76 @@
     \end{array}
     \label{eq:bahia_cerrada_periodo}
   \end{equation}
+
+La soluci\'on mediante FEM es implementada para distintas resoluciones de malla y analizada su convergencia mediante la determinaci\'on del error asociado al valor propio y el error asociado al vector propio (desnivelaci\'on superficial).
+
+Para el caso del error en el valor propio se utilza la formula:
+
+$$E = |\lambda^h - \lambda|$$
+
+donde \\
+
+$\lambda$ es la longitud de onda obtenida mediante la soluci\'on anal\'itica\\
+
+$\lambda^h$ es la longitud de onda obtenida mediante aproximaci\'on por FEM\\
+
+Para el caso del error en el valor de la desnivelaci\'on superficial el error se calcula mediante la norma $L^2$:
+
+$$E = \left(\int_{\Omega} (u^h - u) \mathrm{d}\boldsymbol{x} \right)^{1/2}$$
+
+Los resultados para el valor propio se muestran en la figura \ref{fig:velores_propios}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=17cm]{figuras/valores_propiosFEM.png}
+  \caption{ Resultados aproximaci\'on valores propios mediante FEM y errores asociados}  
+  \label{fig:velores_propios}
+\end{figure}
+
+Ajustando una curva a los datos ($log(E)$, $log(h)$) se obtiene una recta $log(E) = log(C) + p log(h)$ donde p es la taza de convergencia
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+Modo & C & p \\ 
+\hline 
+1 & 0.62007961 & 2.4403783 \\
+\hline 
+3 & 0.39830035 & 2.33894099 \\ 
+\hline 
+5 & 0.69813644 & 2.26494859 \\  
+\hline 
+7 & 0.71017628 & 2.33846474 \\ 
+\hline 
+9 & 0.68486822 & 2.12311422 \\  
+\hline 
+11 &  0.70325574 & 2.17136287 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+Para el caso de la convergencia de la desnivelaci\'on superficial , los resultados se muestran en la figura \ref{fig:vectores_propios}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=17cm]{figuras/vectores_propiosFEM.png}
+  \caption{ Errores modo propio superficie. Norma L2}  
+  \label{fig:vectores_propios}
+\end{figure}
+
+Ajustando una recta a los datos ($log(E)$, $log(h)$)
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+Modo & C & p \\ 
+\hline 
+1 & 0.0765871 & 2.04894336 \\  
+\hline 
+3 & 0.29036431 & 2.09300275 \\  
+\hline 
+\end{tabular} 
+\end{center}
+
+En ambos casos se puede ver que la taza de convergencia es de orden 2.
+
