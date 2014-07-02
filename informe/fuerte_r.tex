@@ -1,0 +1,38 @@
+En esta secci\'on se describe c\'omo a partir de las ecuaciones de Navier-Stokes se puede deducir un sistema de ecuaciones que permite describir la propagacion de ondas largas en fluidos ideales incompresibles con superficie libre. Si adem\'as se consideran ondas de amplitud peque\~na, como la propagaci\'on de un tsunami en el oc\'eano o como t\'ipicamente se observa en una bah\'ia, entonces es posible decir que su propagaci\'on es lineal (i.e., se satisface el principio de superposici\'on) y mediante una analog\'ia a la propagaci\'on de ondas el\'asticas y ac\'usticas, como en una cuerda vibrante o un tubo resonante, es posible realizar una descomposici\'on harm\'onica que asocie a cada frecuencia, el campo de resonancia asociado, lo cuales matem\'aticamente se identifican como los vectores y valores propios del operador diferencial asociado y que da lugar a la ecuaci\'on de Helmholtz. Finalmente se estudia la existencia de estos vectores propios como consecuencia del teorema espectral para operadores lineales en espacios vectoriales de dimensi\'on infinita.
+
+\section{Las ecuaciones de aguas someras}
+
+Sea $\Omega$
+
+\begin{align}
+  \begin{split}
+    \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \vec v) &= 0 \\
+    \frac{\partial }{\partial t}(\rho \vec v) + \nabla \cdot ( \rho \vec v \otimes \vec v ) &= \nabla \cdot \vec \Sigma + \rho \vec f_b
+  \end{split}
+  \label{NS-compresible}
+\end{align}
+
+\begin{align}
+  \begin{split}
+    \nabla \cdot \vec v &= 0 \\
+    \frac{\partial }{\partial t}\vec v + \nabla \cdot \vec v \otimes \vec v  &= -\frac{1}{\rho}\nabla p + \vec f_b    \\
+    w|_{z=\eta	} &= \frac{\partial \eta}{\partial t}+\vec v \cdot \nabla \eta \\
+    w|_{z=b} &= \frac{\partial b}{\partial t} + \vec v \cdot \nabla b \\    
+    p|_{z = \eta} &= 0
+  \end{split}
+  \label{NS-incompresible}
+\end{align}
+
+\begin{align}
+  \begin{split}
+    \frac{\partial \eta}{\partial t} + \frac{\partial}{\partial x}(hu) + \frac{\partial}{\partial y}(hv) &= 0 \\
+    \frac{\partial }{\partial t}(hu) + \frac{\partial}{\partial x}\left(\frac{1}{2}gh^2+hu^2 \right) + \frac{\partial}{\partial y}( huv ) &= -gh\frac{\partial b}{\partial y} \\
+    \frac{\partial}{\partial t}( hv)+ \frac{\partial}{\partial x}( huv ) + \frac{\partial}{\partial y}\left(\frac{1}{2}gh^2+hv^2 \right) &=  -gh\frac{\partial b}{\partial y}  \\
+  \end{split}
+\end{align}
+
+
+
+% = -gh\frac{\partial}{\partial x}b    
+%  \\
+%     \frac{\partial hv}{\partial t} +\frac{\partial}{\partial x}\left( huv ) + \frac{\partial}{\partial y}\left(\frac{1}{2}gh^2+hv^2 \right) + = -gh\frac{\partial}{\partial y}b 

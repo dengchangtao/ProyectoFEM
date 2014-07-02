@@ -39,6 +39,7 @@ No olvide en esta secci\'on citar a los autores y sus trabajos relevantes para s
   \input{fuerte.tex}
   \subsection{Formulaci\'on variacional y de Galerkin}
   \input{variacional_galerkin.tex}
+  \subsection{Comentarios sobre la implementaci\'on y convergencia del m\'etodo}
 \section{Validaci\'on del modelo}
   \input{validacion.tex}
 \section{Resultados}

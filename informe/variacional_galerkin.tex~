@@ -1,4 +1,4 @@
-La formulaci\'on fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
+La formulación fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
 
 \begin{align*}
 \text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$ tal que:}\\
