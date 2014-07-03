@@ -39,9 +39,9 @@ La soluci\'on mediante FEM es implementada para distintas resoluciones de malla 
   \begin{subfigure}{0.3\textwidth}
     \includegraphics{figuras/modonum_2.png}
   \end{subfigure}
-  \label{multiplicidad}
-  \caption{Ejemplo de la multiplicidad de valores propios: modos de oscilaci\'on 1 y 2 usando $h=1/25$  mediante el m\'etodo de Elementos Finitos.}
   
+  \caption{Ejemplo de la multiplicidad de valores propios: modos de oscilaci\'on 1 y 2 usando $h=1/25$  mediante el m\'etodo de Elementos Finitos.}
+\label{multiplicidad}  
 \end{figure}
 
 Para la determinaci\'on del error en el valor propio ($E_L$) se utilza norma natural de $\mathbb{R}$
@@ -50,13 +50,13 @@ $$E_L = |L^h - L|$$
 
 donde $L$ es la longitud de onda obtenida mediante la soluci\'on anal\'itica $L^h$ es la longitud de onda obtenida mediante aproximaci\'on por FEM.
 
-La figura \ref{fig:velores_propios} muestra los errores como funci\'on de la longitud $h$ del elemento, para los 6 primeros valores propios en cada resoluci\'on de malla. Se verifica que los 6 primeros valores propios se aproximan de manera ordenada a los valores propios de la soluci\'on anal\'itica.
+La figura \ref{fig:valores_propios} muestra los errores como funci\'on de la longitud $h$ del elemento, para los 6 primeros valores propios en cada resoluci\'on de malla. Se verifica que los 6 primeros valores propios se aproximan de manera ordenada a los valores propios de la soluci\'on anal\'itica.
 
 \begin{figure}
   \centering
   \includegraphics[width=17cm]{figuras/valores_propiosFEM.png}
   \caption{ Resultados aproximaci\'on valores propios mediante FEM y errores asociados}  
-  \label{fig:velores_propios}
+  \label{fig:valores_propios}
 \end{figure}
 
 Para estimar el orden de convergencia se ajusta una curva a los datos ($log(E)$, $log(h)$) para cada resoluci\'on de malla, ajustando una recta $log(E) = log(C) + p log(h)$ donde p nos indica la taza de convergencia.
@@ -98,9 +98,9 @@ Los resultados obtenidos para cada resoluci\'on de malla se muestran en la figur
   \label{fig:vectores_propios}
 \end{figure}
 
-Para estimar la taza de convergencia se ajusta una curva a los datos ($log(E)$, $log(h)$), de manera similar a los valores propios. Los resultados para los dos primeros modos se muestran la siguiente tabla. Es importante señalar que para estimar el error se debe escalar los resultados de FEM, pues en la soluci\'on anal\'itica se utiliz\'o una amplitud m\'axima de 1 con valores positivos en el borde izquierdo.
+Para estimar la taza de convergencia se ajusta una curva a los datos ($log(E_u)$, $log(h)$), de manera similar a los valores propios. Los resultados para los dos primeros modos se muestran la siguiente tabla. Es importante señalar que para estimar el error se debe escalar los resultados de FEM, pues en la soluci\'on anal\'itica se utiliz\'o una amplitud m\'axima de 1 con valores positivos en el borde izquierdo. En ambos casos se puede ver que la taza de convergencia es de orden 2.
 
-\begin{table}[h]
+\begin{table}
   \centering
   \begin{tabular}{|c|c|c|}
   \hline 
@@ -114,12 +114,8 @@ Para estimar la taza de convergencia se ajusta una curva a los datos ($log(E)$, 
   \caption{Coeficientes de ajuste de las curvas $\log(E_u)=\log(C)+p\log(h)$}
 \end{table}
 
-En ambos casos se puede ver que la taza de convergencia es de orden 2.
-No se utilizan
 
-
-
-\begin{figure}  
+\begin{figure}
   \centering
   \begin{subfigure}{0.4\textwidth}
     \centering
