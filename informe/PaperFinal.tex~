@@ -6,7 +6,10 @@
 
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{color}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
 %%%  Language Settings  %%%
+
 %\usepackage[spanish]{babel}  % Spanish language
 % \usepackage[applemac]{inputenc}  % Allows for accents!! Useful for spanish documents
 %\usepackage[latin1]{inputenc}
@@ -46,13 +49,13 @@ Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on 
 \section{Resultados}
   \input{validacion.tex}
   \input{casotalcahuano.tex}
-  \input{resultados.tex}
+%   \input{resultados.tex}
 %En esta secci\'on usted debe presentar los resultados obtenidos de su investigaci\'on, en una secuencia l\'ogica. En esta secci\'on usted NO debe interpretar los resultados ni concluir algo a partir de estos. Sin embargo, si puede destacar algunos resultados importantes (por ejemplo, {\it es importante notar que el valor del estiramiento principal mayor alcanzan valores sobre 1.5, que corresponden a una deformaci\'on axial del 50 \%}) que ser\'an el punto de partida de sus conclusiones en la secci\'on de discusi\'on. Los gr\'aficos deben ser confeccionados con mucha atenci\'on, de manera de ser muy claros y no tener demasiada informaci\'on que dificulte leerlos. Sin embargo, sea elegante y eficiente, y no genere gr\'aficos que no reporten informaci\'on importante. No olvide agregar leyendas para las figuras (con el comando {\tt \textbackslash caption}) que ayuden la compresi\'on de estas (no repita informaci\'on en el texto principal). Para un ejemplo, vea la figura \ref{fig:tvconv}.
 
 
 
-\section{Discusion}
-
+\section{Discusi\'on}
+  \input{discusion.tex}
 %En esta secci\'on usted debe interpretar sus resultados presentados en la secci\'on anterior, y compararlos/contrastarlos con resultados conocidos previamente en otros art\'iculos o libros. Lo anterior le permitir\'a generar conclusiones a partir de la interpretaci\'on de sus resultados. Sea claro en los pasos de su razonamiento que lo llevan a sus conclusiones. La secci\'on de discusi\'on debe responder las preguntas o verificar las hip\'otesis planteadas en la secci\'on de {\it introducci\'on}. Es recomendable tambi\'en incluir en la discusi\'on cuales son las limitantes de su investigaci\'on, y c\'omo pueden afectar los resultados y conclusiones obtenidas. Finalmente, es recomendable incluir posibles ideas \'o proyectos futuros que nacen a ra\'iz del trabajo de investigaci\'on presentado en el art\'iculo.
 
 

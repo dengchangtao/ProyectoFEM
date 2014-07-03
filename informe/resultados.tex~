@@ -1,2 +1,2 @@
-asfadsf
-un resultado muy bac\'an
+\subsection{Bah\'ia rectangular de ancho unitario}
+  Es posible afirmar que al comparr con la soluci\'on anal\'itica para el caso de la bah\'ia cerrada de ancho unitario, incluso sin utilizar mallas demasiado finas, cualitativamente los vectores asociados a cada modo propio muestran formas razonables, en t\'erminos de los nodos, antinodos y estructura general, lo cual se puede verificar, por ejemplo, en la figura \ref{fig:modos_numericovsanalitico}. En t\'erminos m\'as precisos, se verific\'o experimentalmente que la convergencia de los vectores propios asociados a los primeros modos de oscilaci\'on es de orden 2 o mejor, al medirlo usando la norma de $\mathcal{L}^2$, como se ve en la \hilight{tabla X}.
