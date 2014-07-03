@@ -3,7 +3,7 @@ import scipy.io
 import anuga
 import matplotlib.pyplot as plt
 from matplotlib import rc,cm
-font = {'size'   : 6}
+font = {'size'   : 10}
 rc('font', **font)
 
 #obtener los datos
@@ -180,12 +180,21 @@ plt.savefig('nodos+text.png',dpi=300)
 plt.close()
 
 plt.figure()
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 criterio4=np.nonzero((lm[:,0]>-1)*(lm[:,1]>-1)*(lm[:,2]>-1))[0]
-plt.pcolormesh(x-b[:,0].min(),y-b[:,1].min(),z,cmap=cm.gist_earth)
+im=plt.pcolormesh(x-b[:,0].min(),y-b[:,1].min(),z,cmap=cm.gist_earth)
+#plt.colorbar()
 plt.contour(x-b[:,0].min(),y-b[:,1].min(),z,[0.],colors='w')
 plt.triplot(xt,yt,t[criterio4],linewidth=0.3)
 plt.axis('equal')
-#plt.axis('off')
+plt.axis('off')
+ax=plt.gca()
+divider = make_axes_locatable(ax)
+cax = divider.append_axes("right", size="5%", pad=0.1)
+cb=plt.colorbar(im, cax=cax)
+#cb = plt.colorbar(im)
+cb.set_label('Elevacion [m]')
+
 plt.savefig('04bati+malla.png',bbox_inches='tight',dpi=300)
 plt.close()
 

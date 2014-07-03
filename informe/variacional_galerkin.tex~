@@ -92,7 +92,6 @@ $M_{ab} = (N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} N_a(\bold
 
 Las matrices se construyeron sumando las contribuciones de cada elemento, usando los algoritmos de ensamblaje propuestos por Hughes \cite{hughes2000} e integrando sobre elementos isoparam\'etricos \verb;Tri3;. 
 
-Adem\'as es importante notar que el problema finalmente se traduce en encontrar los 
 
 
 
