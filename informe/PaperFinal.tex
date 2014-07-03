@@ -19,7 +19,7 @@
 %\usepackage{fullpage} % quick-and-dirty way to get 1in for all margins
 \usepackage[left=2cm,top=2cm,right=2cm,bottom=2.5cm,nohead]{geometry}
 
-\title{T\'itulo del proyecto final \'o nombre del art\'iculo}
+\title{Resonancia en bah\'ias utilizando el m\'etodo de elementos finitos}
 \author{Jos\'e Galaz, Jaime Soto}
 \date{}
 
@@ -27,18 +27,18 @@
 \maketitle
 
 \begin{abstract}
-    A menudo la propagaci\'on y superposici\'on de ondas en bah\'ias puede generar oscilaciones de per\'iodos largos que ocasionan inundaci\'on y da\~no inesperado en embarcaciones y estructuras, sin embargo, a partir de las ecuaciones de Navier-Stokes es posible deducir que, cuando estas ondas largas poseen pequeña amplitud, las frecuencias y modos de oscilación corresponden a los valores y vectores propios dados por la ecuación de Helmholtz. En este trabajo ha sido posible desarrollar una formulación variacional del problema, e implementar computacionalmente el método de Galerkin para calcular los modos de resonancia aproximados para una bah\'ia de geometría arbitraria. Ha sido posible validar con soluciones anal\'iticas y se ha aplicado el método para estudiar la bah\'ia de Concepción, Chile, encontrando que los períodos de oscilación son de orden de magnitud esperado y la forma de los modos principales concuerda con lo que se reporta en la literatura \cite{Belloti2012}.
+    A menudo la propagaci\'on y superposici\'on de ondas en bah\'ias puede generar oscilaciones de per\'iodos largos que ocasionan inundaci\'on y da\~no inesperado en embarcaciones y estructuras, sin embargo, a partir de las ecuaciones de Navier-Stokes es posible deducir que, cuando estas ondas largas poseen pequeña amplitud, las frecuencias y modos de oscilación corresponden a los valores y vectores propios dados por la ecuación de Helmholtz. En este trabajo ha sido posible desarrollar una formulación variacional del problema, e implementar computacionalmente el método de Galerkin para calcular los modos de resonancia aproximados para una bah\'ia de geometría arbitraria. Ha sido posible validar con soluciones anal\'iticas y se ha aplicado el método para estudiar la bah\'ia de Concepción, Chile, encontrando que los períodos de oscilación son de orden de magnitud esperado, y similares a los de un tsunami, y que la forma de los modos principales concuerda con lo que se reporta en la literatura \cite{Belloti2012}.
 \end{abstract}
 
 \section{Introducci\'on}
 
-El fen\'omeno de resonancia al interior de una regi\'on  semicerrada reviste una especial importancia en el estudio del comportamiento de ondas que se propagan desde el oc\'eano hacia zonas costeras y que pueden inducir la amplificaci\'on de estas al ingresar a una regi\'on semicerrada \cite{Kowalik1993}. El fen\'omeno de resonancia puede condicionar el diseño de puertos y comportamiento de naves al interior de estos \cite{Diaz2006web}, la inundaci\'on por efecto de tormentas y marejadas \cite{Kowalik1993} y en la amplificaci\'on y/o aparici\'on de ondas de tsunami tard\'ia, horas despu\'es de la llegada de la primera onda \cite{Kowalik1993}. Esta \'ultima podría ser una explicaci\'on para describir las caracter\'isticas que tuvo el tsunami de Maule 2010 \cite{Cyper2012web}.
+El fen\'omeno de resonancia al interior de una regi\'on  semicerrada reviste una especial importancia en el estudio del comportamiento de ondas que se propagan desde el oc\'eano hacia zonas costeras y que puede inducir la amplificaci\'on de \'estas al ingresar a una regi\'on semicerrada \cite{Kowalik1993}. El fen\'omeno de resonancia puede condicionar el dise\~no de puertos y comportamiento de naves al interior de estos \cite{Diaz2006web}, la inundaci\'on por efecto de tormentas y marejadas \cite{Kowalik1993} y en la amplificaci\'on y/o aparici\'on de ondas de tsunami tard\'ia, horas despu\'es de la llegada de la primera onda \cite{Kowalik1993}. Esta \'ultima podr\'ia ser una explicaci\'on para describir las caracter\'isticas que tuvo el tsunami de Maule 2010 \cite{Cyper2012web}.
 
-Existen varias formas de aproximarse a una identificaci\'on y cuantificaci\'on de los modos propios de oscilaci\'on al interior de una bah\'ia. Una aproximaci\'on es propagar varias ondas (distinta frecuencia y direcci\'on) hacia el interior y cuantificar la amplificaci\'on de estas. Esta propagaci\'on puede ser lineal o no lineal \cite{Mei2005}. Otra aproximaci\'on consiste en calcular directamente los modos propios de oscilaci\'on de la ba\'hia \cite{Belloti2012, Mei2005}. Esta \'ultima aproxiamci\'on es la utilizada en este trabajo.
+Existen varias formas de aproximarse a una identificaci\'on y cuantificaci\'on de los modos propios de oscilaci\'on al interior de una bah\'ia. Una de \'estas es propagar varias ondas (distinta frecuencia y direcci\'on) hacia el interior y cuantificar la amplificaci\'on de estas. Esta propagaci\'on puede ser lineal o no lineal \cite{Mei2005}. Otra aproximaci\'on consiste en calcular directamente los modos propios de oscilaci\'on de la ba\'hia \cite{Belloti2012, Mei2005}. Esta \'ultima aproximaci\'on es la utilizada en este trabajo.
 
-El objetivo de este trabajo es determinar los modos de oscilaci\'on de una bah\'ia utilizando una aproximaci\'on por elementos finitos. La mayor dificultad que presenta una aproximaci\'on directa para la determinaci\'on de los modos propios es la seleccionar una condici\'on de borde apropiada a cada caso \cite{Mei2005, Rabino2009}. Como una primera aproxiamci\'on se considerar\'a una bah\'ia cerrada.
+El objetivo de este trabajo es determinar los modos de oscilaci\'on de una bah\'ia utilizando una aproximaci\'on por elementos finitos. La mayor dificultad que presenta una aproximaci\'on directa para la determinaci\'on de los modos propios es la de seleccionar una condici\'on de borde apropiada a cada caso \cite{Mei2005, Rabino2009}. Como una primera aproximaci\'on se considerar\'a una bah\'ia cerrada.
 
-Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz, mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumman $u,_i  n_i = 0$. Las ecuaci\'on de Helmholtz es derivada de la ecuacion de Navier-Stokes y presentada en su formualci\'on fuerte. Se obtiene la formulaci\'on variacional y galerkin asociada al problema fuerte y se implementan elementos tipo tri3 para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y alicado al caso real de la Bah\'ia de Talcahuano
+Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumman $u,_i  n_i = 0$. Las ecuaci\'on de Helmholtz es derivada de la ecuacion de Navier-Stokes y presentada en su formulaci\'on fuerte. Se obtiene la formulaci\'on variacional y de Galerkin asociada al problema fuerte y se implementan elementos tipo tri3 para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y alicado al caso real de la Bah\'ia de Talcahuano
 
 
 \section{Marco Te\'orico}
@@ -83,27 +83,29 @@ Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on 
 
 \bibitem{Diaz2006web} {\tt http://www.tdx.cat/bitstream/handle/10803/10618/}
 
-\bibitem{Cyper2012web} {\tt http://ciperchile.cl/2012/01/18/tsunami-paso-a-paso-los-escandalosos-errores-y-omisiones-del-shoa-y-la-onemi/
+\bibitem{Cyper2012web} {\tt http://ciperchile.cl/2012/01/18/tsunami-paso-a-paso-los-escandalosos} {\tt-errores-y-omisiones-del-shoa-y-la-onemi/
 }
 
 \bibitem{Belloti2012}
-	Belloti et al.Modal analysis of semi-enclosed basins. \emph{Coastal Engineering} 2012; {\bf 64}, 16--25.
+	G. Belloti, R. Briganti, G. M. Beltrami, L. Franco. Modal analysis of semi-enclosed basins. \emph{Coastal Engineering} 2012; {\bf 64}, 16--25.
 
 \bibitem{Rabino2009}
 	A.B. Rabinovich. Seiches and harbor oscillations. \emph{Handbook of coastal and ocean engineering. World Scientific Publ} 2009; {\bf 64}, 193--236.
 
+\bibitem{Yamazaki2011}
+	Y. Yamazaki and K. F. Cheung. Shelf resonance and impact of near-field tsunami generated by the 2010 Chile earthquake. {\it Geophysical Research Letters}. Vol 38.
 
 
 \end{thebibliography}
 
-\appendix
-
-\section{Sobre los ap\'endices}
-	Los ap\'endices contienen informaci\'on que no es de car\'acter esencial para entender el art\'iculo. Muchas derivaciones de ecuaciones, demostraciones de teoremas (con la salvedad de art\'iculos en revistas de matem\'atica), tablas de datos, etc., son inclu\'idas en el ap\'endice.
-	
-\section{Sobre la evaluaci\'on del art\'iculo final}
-	El art\'iculo final ser\'a evaluado tanto en los aspectos acad\'emicos (calidad de los resultados obtenidos) como en aspectos de presentaci\'on y redacci\'on. En particular, se considerar\'a en la evaluaci\'on la redacci\'on, diagramaci\'on, ortograf\'ia, correcta referenciaci\'on (incluir las citas y bibliograf\'ia), gr\'aficos y figuras, entre otros.
-
+% \appendix
+% 
+% \section{Sobre los ap\'endices}
+% 	Los ap\'endices contienen informaci\'on que no es de car\'acter esencial para entender el art\'iculo. Muchas derivaciones de ecuaciones, demostraciones de teoremas (con la salvedad de art\'iculos en revistas de matem\'atica), tablas de datos, etc., son inclu\'idas en el ap\'endice.
+% 	
+% \section{Sobre la evaluaci\'on del art\'iculo final}
+% 	El art\'iculo final ser\'a evaluado tanto en los aspectos acad\'emicos (calidad de los resultados obtenidos) como en aspectos de presentaci\'on y redacci\'on. En particular, se considerar\'a en la evaluaci\'on la redacci\'on, diagramaci\'on, ortograf\'ia, correcta referenciaci\'on (incluir las citas y bibliograf\'ia), gr\'aficos y figuras, entre otros.
+% 
 
 
 

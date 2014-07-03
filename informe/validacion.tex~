@@ -41,7 +41,7 @@ Los resultados para el valor propio se muestran en la figura \ref{fig:velores_pr
 Ajustando una curva a los datos ($log(E)$, $log(h)$) se obtiene una recta $log(E) = log(C) + p log(h)$ donde p es la taza de convergencia
 
 
-\begin{table}[h]
+\begin{table}[H!]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline 
@@ -100,7 +100,7 @@ En ambos casos se puede ver que la taza de convergencia es de orden 2.
   \end{subfigure}
   
   \caption{Ejemplo de la multiplicidad de valores propios: modos de oscilaci\'on 1 y 2 usando $h=1/25$  mediante el m\'etodo de Elementos Finitos.}
-  \label{fig:multiplicidad}
+  
 \end{figure}
 
 \begin{figure}  
