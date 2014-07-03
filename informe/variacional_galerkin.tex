@@ -1,7 +1,7 @@
 La formulaci\'on fuerte del problema de valor de frontera \eqref{helmholtz}, es
 
 \begin{align*}
-\text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$ tal que:}\\
+\text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $u\in\mathcal{C}^2$ y $\omega \in \mathbb{R} $ tales que}\\
 \omega^2 u + (gh u,_i),_i  = 0, \ \ \ \ & \boldsymbol{x} \in \Omega \\
 \frac{\partial u}{\partial n} = u,_i n_i = 0, \ \ \ \ & \boldsymbol{x} \in \partial \Omega_h \ & (S) \\
 u=0, \ \ \ \ &\boldsymbol{x} \in \partial \Omega_g\\
@@ -90,7 +90,8 @@ $K_{ab} = a(N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} gh N_a,_
 
 $M_{ab} = (N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} N_a(\boldsymbol{x}) N_b(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
 
-Las matrices se construyeron sumando las contribuciones de cada elemento, usando los algoritmos de ensamblaje propuestos por Hughes \cite{hughes2000} e integrando sobre elementos isoparam\'etricos \verb;Tri3;.
+Las matrices se construyeron sumando las contribuciones de cada elemento, usando los algoritmos de ensamblaje propuestos por Hughes \cite{hughes2000} e integrando sobre elementos isoparam\'etricos \verb;Tri3;. 
+
 
 
 

@@ -8,6 +8,7 @@
 \usepackage{subcaption}
 \usepackage{color}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\def\vec   #1{\mbox{\boldmath $#1$}{}}
 %%%  Language Settings  %%%
 
 %\usepackage[spanish]{babel}  % Spanish language
