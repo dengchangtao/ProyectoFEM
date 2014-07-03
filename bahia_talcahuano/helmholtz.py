@@ -208,4 +208,5 @@ def Tri3SolPlot(xyz,IEN,u,Ninterp):
 	x1[a1,a2]=xhat[0]
 	x2[a1,a2]=xhat[1]
     uinterp=griddata(xeset,ueset,(x1,x2))
-    plt.pcolormesh(x1,x2,uinterp,vmin=u.min(),vmax=u.max(),cmap=cm.hsv)
+    p=plt.pcolormesh(x1,x2,uinterp,vmin=u.min(),vmax=u.max(),cmap=cm.hsv)
+  return p

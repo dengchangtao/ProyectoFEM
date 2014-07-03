@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 #from matplotlib import cm
 from helmholtz import *
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 #import pypar
 #r = pypar.rank()
 
@@ -30,14 +31,20 @@ def plotmany(nind,iv,l,v):
     print ind
     u=np.array(v[:,iv[ind]])
     plt.figure()
-    Tri3SolPlot(xyz,IEN,u,5)
+    im=Tri3SolPlot(xyz,IEN,u,5)
     plt.axis('equal')
     plt.axis('off')
-    plt.colorbar()
-    w=2.*np.pi/np.sqrt(l[iv[ind]])
-    plt.title('n=%i,   Periodo=%.3f [minutos]'%(ind,w/60 ) )
+  
+    plt.title('n=%i,   T=%.3f minutos'%(ind,w/60 ) )
+    #plt.colorbar(orientation='horizontal')
+    ax=plt.gca()
+    divider = make_axes_locatable(ax)
+    cax = divider.append_axes("right", size="5%", pad=0.1)
+    cb=plt.colorbar(im, cax=cax)
+    
+    
     plt.savefig('modos%i.png'%ind)
     plt.close()
-plotmany(4,iv1,l1,v1)
+plotmany(20,iv1,l1,v1)
 #pypar.finalize()
   
