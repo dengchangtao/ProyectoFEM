@@ -16,32 +16,54 @@
     \end{array}
     \label{eq:bahia_cerrada_periodo}
   \end{equation}
+  
+Asimismo la longitud de onda queda expresada por: 
 
-La soluci\'on mediante FEM es implementada para distintas resoluciones de malla y analizada su convergencia mediante la determinaci\'on del error asociado al valor propio y el error asociado al vector propio correspondiente.
+  \begin{equation}
+    \begin{array}{cc}
+    L_{nm}=2 \left( n^2+m^2\right)^{-1/2} & \text{ con } n,m \in \mathbb{N}_0
+    \end{array}
+    \label{eq:bahia_cerrada_longitud}
+  \end{equation}
 
-Para el caso del error en el valor propio se utilza norma natural de $\mathbb{R}$
+Se utiliza esta \'ultima, porque permite comparar y verificar directamente con la geometr\'ia de la bah\'ia cuadrada.
 
-$$E = |\lambda^h - \lambda|$$
+La soluci\'on mediante FEM es implementada para distintas resoluciones de malla y su convergencia es estimada calculando el error asociado a la determinaci\'on del valor propio y el vector propio correspondiente, respecto de la soluci\'on anal\'itica. Cabe destacar que los modos propios analizados no son consecutivos debido a la multiplicidad de valores propios al ser una regi\'on con ambas dimensiones equivalentes (ver figura \ref{multiplicidad})
 
-donde  \hilight{$\lambda$} es la longitud de onda obtenida mediante la soluci\'on anal\'itica \hilight{$\lambda^h$} es la longitud de onda obtenida mediante aproximaci\'on por FEM\\
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.3\textwidth}
+    \includegraphics{figuras/modonum_1.png}
+  \end{subfigure}
+  ~
+  \begin{subfigure}{0.3\textwidth}
+    \includegraphics{figuras/modonum_2.png}
+  \end{subfigure}
+  
+  \caption{Ejemplo de la multiplicidad de valores propios: modos de oscilaci\'on 1 y 2 usando $h=1/25$  mediante el m\'etodo de Elementos Finitos.}
+\label{multiplicidad}  
+\end{figure}
 
-Para el caso del error en el valor de la desnivelaci\'on superficial el error se calcula mediante la norma de $\mathcal{L}^2(\Omega,\mathbb{R})$
+Para la determinaci\'on del error en el valor propio ($E_L$) se utilza norma natural de $\mathbb{R}$
 
-$$E = \left(\int_{\Omega} (u^h - u) \mathrm{d}\boldsymbol{x} \right)^{1/2}$$
+$$E_L = |L^h - L|$$
 
-Los resultados para el valor propio se muestran en la figura \ref{fig:velores_propios}
+donde $L$ es la longitud de onda obtenida mediante la soluci\'on anal\'itica $L^h$ es la longitud de onda obtenida mediante aproximaci\'on por FEM.
+
+La figura \ref{fig:valores_propios} muestra los errores como funci\'on de la longitud $h$ del elemento, para los 6 primeros valores propios en cada resoluci\'on de malla. Se verifica que los 6 primeros valores propios se aproximan de manera ordenada a los valores propios de la soluci\'on anal\'itica.
 
 \begin{figure}
   \centering
   \includegraphics[width=17cm]{figuras/valores_propiosFEM.png}
   \caption{ Resultados aproximaci\'on valores propios mediante FEM y errores asociados}  
-  \label{fig:velores_propios}
+  \label{fig:valores_propios}
 \end{figure}
 
-Ajustando una curva a los datos ($log(E)$, $log(h)$) se obtiene una recta $log(E) = log(C) + p log(h)$ donde p es la taza de convergencia
+Para estimar el orden de convergencia se ajusta una curva a los datos ($log(E)$, $log(h)$) para cada resoluci\'on de malla, ajustando una recta $log(E) = log(C) + p log(h)$ donde p nos indica la taza de convergencia.
 
+La siguiente tabla muestra los resultados de convergencia para los 6 primeros modos.
 
-\begin{table}[H!]
+\begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline 
@@ -60,20 +82,26 @@ Modo & C & p \\
 11 &  0.70325574 & 2.17136287 \\
 \hline 
 \end{tabular} 
-\caption{\hilight{Coeficientes de ajuste de las curvas $\log(E_\lambda)=\log(C)+p\log(h)$}}
+\caption{Coeficientes del ajuste de las curvas $\log(E_L)=\log(C)+p\log(h)$} para los 6 primeros modos.
+\label{tabla:EL}
 \end{table}
 
-Para el caso de la convergencia de los \hilight{vectores propios}, los resultados se muestran en la figura \ref{fig:vectores_propios}
+Para el caso del error de los vectores propios (que corresponde a la desnivelaci\'on instant\'anea), este se calcula mediante la norma de $\mathcal{L}^2(\Omega,\mathbb{R})$
+
+$$E_u = \left(\int_{\Omega} (u^h - u) \mathrm{d}\boldsymbol{x} \right)^{1/2}$$
+
+Los resultados obtenidos para cada resoluci\'on de malla se muestran en la figura \ref{fig:vectores_propios}.
 
 \begin{figure}
   \centering
   \includegraphics[width=17cm]{figuras/vectores_propiosFEM.png}
-  \caption{ \hilight{Errores en norma $\mathcal{L}^2$ de los vectores asociados a cada modo propio}  }
+  \caption{Errores en norma $\mathcal{L}^2$ de los vectores asociados a cada modo propio}
   \label{fig:vectores_propios}
 \end{figure}
 
-Ajustando una recta a los datos ($log(E)$, $log(h)$)
-\begin{table}[h]
+Para estimar la taza de convergencia se ajusta una curva a los datos ($log(E_u)$, $log(h)$), de manera similar a los valores propios. Los resultados para los dos primeros modos se muestran la siguiente tabla. Es importante señalar que para estimar el error se debe escalar los resultados de FEM, pues en la soluci\'on anal\'itica se utiliz\'o una amplitud m\'axima de 1 con valores positivos en el borde izquierdo. En ambos casos se puede ver que la taza de convergencia es de orden 2.
+
+\begin{table}
   \centering
   \begin{tabular}{|c|c|c|}
   \hline 
@@ -84,26 +112,12 @@ Ajustando una recta a los datos ($log(E)$, $log(h)$)
   3 & 0.29036431 & 2.09300275 \\  
   \hline 
   \end{tabular} 
-  \caption{\hilight{Coeficientes de ajuste de las curvas $\log(E_u)=\log(C)+p\log(h)$}}
+  \caption{Coeficientes de ajuste de las curvas $\log(E_u)=\log(C)+p\log(h)$}
+  \label{tabla:Eu}
 \end{table}
 
-En ambos casos se puede ver que la taza de convergencia es de orden 2.
 
 \begin{figure}
-  \centering
-  \begin{subfigure}{0.3\textwidth}
-    \includegraphics{figuras/modonum_1.png}
-  \end{subfigure}
-  ~
-  \begin{subfigure}{0.3\textwidth}
-    \includegraphics{figuras/modonum_2.png}
-  \end{subfigure}
-  
-  \caption{Ejemplo de la multiplicidad de valores propios: modos de oscilaci\'on 1 y 2 usando $h=1/25$  mediante el m\'etodo de Elementos Finitos.}
-  
-\end{figure}
-
-\begin{figure}  
   \centering
   \begin{subfigure}{0.4\textwidth}
     \centering
@@ -124,9 +138,9 @@ En ambos casos se puede ver que la taza de convergencia es de orden 2.
   \begin{subfigure}{0.4\textwidth}
     \centering
     \includegraphics{figuras/modoanalitico_1_2.png}
-  \end{subfigure}
+  \end{subfigure} 
   
-  \label{fig:modos_numericovsanalitico}
   \caption{Modos de oscilaci\'on 3 y 6 obtenidos num\'ericamente para $h=1/25$ (primera columna) y mediante la soluci\'on anal\'itica para $(n,m)=(1,1)$ y $(n,m)=(1,2)$ (segunda columna)}
+  \label{fig:modos_numericovsanalitico}
 \end{figure}
 

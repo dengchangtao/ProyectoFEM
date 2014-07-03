@@ -27,7 +27,7 @@
 \maketitle
 
 \begin{abstract}
-    A menudo la propagaci\'on y superposici\'on de ondas en bah\'ias puede generar oscilaciones de per\'iodos largos que ocasionan inundaci\'on y da\~no inesperado en embarcaciones y estructuras, sin embargo, a partir de las ecuaciones de Navier-Stokes es posible deducir que, cuando estas ondas largas poseen pequeña amplitud, las frecuencias y modos de oscilación corresponden a los valores y vectores propios dados por la ecuación de Helmholtz. En este trabajo ha sido posible desarrollar una formulación variacional del problema, e implementar computacionalmente el método de Galerkin para calcular los modos de resonancia aproximados para una bah\'ia de geometría arbitraria. Ha sido posible validar con soluciones anal\'iticas y se ha aplicado el método para estudiar la bah\'ia de Concepción, Chile, encontrando que los períodos de oscilación son de orden de magnitud esperado, y similares a los de un tsunami, y que la forma de los modos principales concuerda con lo que se reporta en la literatura \cite{Belloti2012}.
+    A menudo la propagaci\'on y superposici\'on de ondas en bah\'ias origina oscilaciones de per\'iodos largos que ocasionan inundaci\'on y da\~no inesperado en embarcaciones y estructuras, sin embargo, a partir de las ecuaciones de Navier-Stokes es posible deducir que, cuando estas ondas largas poseen peque\~na amplitud, las frecuencias y modos de oscilaci\'on corresponden a los valores y vectores propios dados por la ecuaci\'on de Helmholtz. En este trabajo ha sido posible desarrollar una formulaci\'on variacional del problema, e implementar computacionalmente el m\'etodo de Galerkin para calcular los modos de resonancia aproximados para una bah\'ia de geometr\'ia arbitraria. Ha sido posible validar con soluciones anal\'iticas y se ha aplicado el m\'etodo para estudiar la bah\'ia de Concepci\'on, Chile, encontrando que los per\'iodos de oscilaci\'on son de orden de magnitud esperado, y similares a los de un tsunami, y que la forma de los modos principales concuerda con lo que se reporta en la literatura \cite{Belloti2012}.
 \end{abstract}
 
 \section{Introducci\'on}
@@ -36,9 +36,9 @@ El fen\'omeno de resonancia al interior de una regi\'on  semicerrada reviste una
 
 Existen varias formas de aproximarse a una identificaci\'on y cuantificaci\'on de los modos propios de oscilaci\'on al interior de una bah\'ia. Una de \'estas es propagar varias ondas (distinta frecuencia y direcci\'on) hacia el interior y cuantificar la amplificaci\'on de estas. Esta propagaci\'on puede ser lineal o no lineal \cite{Mei2005}. Otra aproximaci\'on consiste en calcular directamente los modos propios de oscilaci\'on de la ba\'hia \cite{Belloti2012, Mei2005}. Esta \'ultima aproximaci\'on es la utilizada en este trabajo.
 
-El objetivo de este trabajo es determinar los modos de oscilaci\'on de una bah\'ia utilizando una aproximaci\'on por elementos finitos. La mayor dificultad que presenta una aproximaci\'on directa para la determinaci\'on de los modos propios es la de seleccionar una condici\'on de borde apropiada a cada caso \cite{Mei2005, Rabino2009}. Como una primera aproximaci\'on se considerar\'a una bah\'ia cerrada.
+El objetivo de este trabajo es implementar un software computacional que permita determinar los modos de oscilaci\'on de una bah\'ia de geometr\'ia arbitraria utilizando una aproximaci\'on por elementos finitos. La mayor dificultad que presenta una aproximaci\'on directa para la determinaci\'on de los modos propios es la de seleccionar una condici\'on de borde apropiada a cada caso \cite{Mei2005, Rabino2009}. Como una primera aproximaci\'on se considerar\'a una bah\'ia cerrada.
 
-Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumman $u,_i  n_i = 0$. Las ecuaci\'on de Helmholtz es derivada de la ecuacion de Navier-Stokes y presentada en su formulaci\'on fuerte. Se obtiene la formulaci\'on variacional y de Galerkin asociada al problema fuerte y se implementan elementos tipo tri3 para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y alicado al caso real de la Bah\'ia de Talcahuano
+Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumman $u,_i  n_i = 0$. La ecuaci\'on de Helmholtz es deducida de las ecuaciones de Navier-Stokes y presentada en su formulaci\'on fuerte. Se obtiene la formulaci\'on variacional y de Galerkin asociada al problema fuerte y se implementan elementos tipo \verb;tri3; para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y aplicado al caso real de la Bah\'ia de Talcahuano
 
 
 \section{Marco Te\'orico}
@@ -93,9 +93,14 @@ Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on 
 	A.B. Rabinovich. Seiches and harbor oscillations. \emph{Handbook of coastal and ocean engineering. World Scientific Publ} 2009; {\bf 64}, 193--236.
 
 \bibitem{Yamazaki2011}
-	Y. Yamazaki and K. F. Cheung. Shelf resonance and impact of near-field tsunami generated by the 2010 Chile earthquake. {\it Geophysical Research Letters}. Vol 38.
+	Y. Yamazaki and K. F. Cheung. Shelf resonance and impact of near-field tsunami generated by the 2010 Chile earthquake. {\it Geophysical Research Letters}. Vol 38. (2011)
 
-
+\bibitem{anuga}
+	O. Nielsen, S. Roberts, D. Gray, A. McPherson and A. Hitchman. Hydrodynamic modelling of coastal inundation. URL: \verb; http://www.ga.gov.au/webtemp/image_cache/GA7981.pdf;
+\bibitem{shoa}
+      Servicio Hidrogr\'afico y Oceanogr\'fico de la Armada de Chile. \verb;http://www.shoa.cl;
+\bibitem{toro}
+      E. Toro. Shock capturing methods for free surface shallow flows. John Wiley, 2001.
 \end{thebibliography}
 
 % \appendix
