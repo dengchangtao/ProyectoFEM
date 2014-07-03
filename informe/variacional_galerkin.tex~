@@ -56,7 +56,7 @@ $$v^h = \sum_{A \in \eta-\eta_g}N_A(\boldsymbol{x})v_A$$
 $$u^h = \sum_{A \in \eta-\eta_g}N_A(\boldsymbol{x})u_A$$
 
 donde 
-$\eta$ es el conjunto de \'indices de los  nodos del dominio y $\eta_g$ de \'indices asociados a condiciones de borde de Dirichlet
+$\eta$ es el conjunto de \'indices de los  nodos del dominio y $\eta_g$ el conjunto de \'indices asociados a nodos con condiciones de borde de Dirichlet
 
 Reemplazando, se tiene que para todo $ v^h\in \mathcal{V}^h$ debe cumplirse
 
@@ -65,18 +65,18 @@ Reemplazando, se tiene que para todo $ v^h\in \mathcal{V}^h$ debe cumplirse
 \sum_{A \in \eta-\eta_g} v_A 
 \left \{
 \sum_{B \in \eta-\eta_g}(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B - 
-\omega^2 \sum_{B \in \eta} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B 
+(\omega^h)^2 \sum_{B \in \eta} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B 
 \right \} = 0
 \end{split}
 \end{equation*}
 
-Como $v_A \neq 0$, entonces para cualquier $A\in \eta-\eta_g$
+Como $v_A \neq 0$, entonces es equivalente a que para cualquier $A\in \eta-\eta_g$
 $$\left( \sum_{B \in \eta-\eta_g}(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) - 
-\omega^2 \sum_{B \in \eta-\eta_g} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B\right) =0 $$
+(\omega^h)^2 \sum_{B \in \eta-\eta_g} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B\right) =0 $$
 
 que en forma matricial se escribe 
 
-$$(\vec M - \omega^2 \vec K)\boldsymbol{u_B} = 0$$
+$$(\vec M - (\omega^h)^2 \vec K)\boldsymbol{u_B} = 0$$
 
 donde 
 
@@ -90,7 +90,7 @@ $K_{ab} = a(N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} gh N_a,_
 
 $M_{ab} = (N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} N_a(\boldsymbol{x}) N_b(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
 
-Los elementos utilizados en este estudio fueron elementos isoparam\'etricos Tri3, y las matrices se construyeron sumando las contribuciones elementales usando los algoritmos de ensamblaje propuestos por Hughes \cite{hughes2000}
+Los elementos utilizados en este estudio fueron elementos isoparam\'etricos Tri3, y las matrices se construyeron sumando las contribuciones por elementos usando los algoritmos de ensamblaje propuestos por Hughes \cite{hughes2000}.
 
 
 
