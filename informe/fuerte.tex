@@ -10,7 +10,7 @@ Sea  $\Omega' \subset \mathbb{R}^3$ el dominio de inter\'es, $t_f>0$ el tiempo f
   \label{NS-incompresible}
 \end{align}
 
-En particular, en una bah\'ia de interior $\Omega \subset \mathbb{R}^2$, con borde impermeable $\partial\Omega_h$ y linea nodal $\partial \Omega_g$ tales que $\partial \Omega = \partial \Omega_h \cup \partial \Omega_g$ , y bajo el supuesto que las ondas son suficietemente largas, de forma que las aceleraciones verticales no tienen influencia significtiva sobre el perfil de presiones hidrost\'atico, y por medio de integraci\'on vertical entre el fondo $b$ y la superficie libre $\eta$, las Ecuaciones No Lineales de Aguas Someras (Non-Linear Shallow water Equations, NSWE) son, 
+En particular, en una bah\'ia de interior $\Omega \subset \mathbb{R}^2$, con borde impermeable $\partial\Omega_h$ y linea nodal $\partial \Omega_g$ tales que $\partial \Omega = \partial \Omega_h \cup \partial \Omega_g$ , y bajo el supuesto que las ondas son suficientemente largas, de forma que las aceleraciones verticales no tienen influencia significtiva sobre el perfil de presiones hidrost\'atico, y por medio de integraci\'on vertical entre el fondo $b$ y la superficie libre $\eta$, las Ecuaciones No Lineales de Aguas Someras (Non-Linear Shallow water Equations, NSWE) son, 
 
 \begin{align}  \begin{split}
 \frac{\partial}{\partial t}\left(\eta\right)+\frac{\partial}{\partial x}\left(hu\right)+\frac{\partial}{\partial y}\left(hv\right) & =0  \text{       si } x \in \Omega\\
@@ -29,7 +29,7 @@ donde, viendo la figura \ref{fig:vars}, $h:(t,x,y) \in [0,t_f] \times \Omega \to
   \begin{figure}
     \centering
     \includegraphics[width=10cm]{figs/variables.pdf}    
-    \caption{ Vist esquem\'tica de ls varibles hidrodin\'amicas definidas para las Ecuaciones No Lineales de Aguas Somers (NSWE).}
+    \caption{ Vista esquem\'tica de ls varibles hidrodin\'amicas definidas para las Ecuaciones No Lineales de Aguas Someras (NSWE).}
     \label{fig:vars}
   \end{figure}
 
@@ -79,7 +79,7 @@ para cualquier $(t,x,y) \in [0,t_f]\times\Omega$. Bajo estos supuestos, se deduc
         \label{helmholtz}
     \end{equation}
     
-    El sistema \eqref{helmholtz} es m\'as conocido como la Ecuaci\'on de Helmholtz, y denota un problema de valores y vectores propios del operador diferencial de la ecuaci\'on de Poisson ($\nabla \cdot c^2 \nabla \square$). Es posible demostrar \cite{nica2011}, que la extensi\'on d\'ebil del operador de Poisson definido sobre $L^2(\Omega,\mathbb{R})$ posee una cantidad numerable de valores y vectores propios $(\lambda_n, u_n)_{n\in\mathbb{N}}$, tales que $u_n\neq 0$ y $0\leq \lambda_1$ y $\lambda_n \leq \lambda_{n+1}$. Adem\'as es f\'acil verificar, que para el caso en que $ \partial \Omega _g = \varnothing$, como es el caso de una bah\'ia cerrada, si $u(x,y)=K \in \mathbb{R}$ para cualquier $(x,y)\in\Omega$, entonces \eqref{helmholtz} se satisface trivialmente y $\lambda=0$ es el primer valor propio, lo cual corresponde f\'sicamente a cuando la superficie libre del agua est\'a a un nivel constante, es decir, cuando la masa de agua est\'a en reposo. Lo anterior se debe tener en consideraci\'on al examinar los valores propios obtenidos num\'ericamente.
+    El sistema \eqref{helmholtz} es m\'as conocido como la Ecuaci\'on de Helmholtz, y denota un problema de valores y vectores propios del operador diferencial de la ecuaci\'on de Poisson ($\nabla \cdot c^2 \nabla \square$). Es posible demostrar \cite{nica2011}, que la extensi\'on d\'ebil del operador de Poisson definido sobre $L^2(\Omega,\mathbb{R})$ posee una cantidad numerable de valores y vectores propios $(\lambda_n, u_n)_{n\in\mathbb{N}}$, tales que $u_n\neq 0$ y $0\leq \lambda_1$ y $\lambda_n \leq \lambda_{n+1}$. Adem\'as es f\'acil verificar, que para el caso en que $ \partial \Omega _g = \varnothing$, como es el caso de una bah\'ia cerrada, si $u(x,y)=K \in \mathbb{R}$ para cualquier $(x,y)\in\Omega$, entonces \eqref{helmholtz} se satisface trivialmente y $\lambda=0$ es el primer valor propio, lo cual corresponde f\'isicamente a cuando la superficie libre del agua est\'a a un nivel constante, es decir, cuando la masa de agua est\'a en reposo. Lo anterior se debe tener en consideraci\'on al examinar los valores propios obtenidos num\'ericamente.
     %f\'isicamente, como $T=2\pi/\sqrt{\lambda}=\infty$ y $u=K$, indica que el primer modo de vibraci\'on de la bah\'ia corresponde uniformes de la superficie libre $\eta$, en todo el dominio.
 %     
 %     @article{nica,

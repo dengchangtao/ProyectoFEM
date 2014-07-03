@@ -8,6 +8,7 @@
 \usepackage{subcaption}
 \usepackage{color}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\def\vec   #1{\mbox{\boldmath $#1$}{}}
 %%%  Language Settings  %%%
 
 %\usepackage[spanish]{babel}  % Spanish language
@@ -38,7 +39,7 @@ Existen varias formas de aproximarse a una identificaci\'on y cuantificaci\'on d
 
 El objetivo de este trabajo es implementar un software computacional que permita determinar los modos de oscilaci\'on de una bah\'ia de geometr\'ia arbitraria utilizando una aproximaci\'on por elementos finitos. La mayor dificultad que presenta una aproximaci\'on directa para la determinaci\'on de los modos propios es la de seleccionar una condici\'on de borde apropiada a cada caso \cite{Mei2005, Rabino2009}. Como una primera aproximaci\'on se considerar\'a una bah\'ia cerrada.
 
-Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumman $u,_i  n_i = 0$. La ecuaci\'on de Helmholtz es deducida de las ecuaciones de Navier-Stokes y presentada en su formulaci\'on fuerte. Se obtiene la formulaci\'on variacional y de Galerkin asociada al problema fuerte y se implementan elementos tipo \verb;tri3; para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y aplicado al caso real de la Bah\'ia de Talcahuano
+Para encontrar una aproximaci\'on a los modos propios se resuelve la ecuaci\'on de Helmholtz mediante el m\'etodo de elementos finitos, aplicado a una bah\'ia cerrada con condiciones de borde Neumann $u,_i  n_i = 0$. La ecuaci\'on de Helmholtz es deducida de las ecuaciones de Navier-Stokes y presentada en su formulaci\'on fuerte. Se obtiene la formulaci\'on variacional y de Galerkin asociada al problema fuerte y se implementan elementos tipo \verb;tri3; para la resolucion de la ecuacion matricial. El modelo es validado en una geometr\'ia rectangular cuya soluci\'on anal\'itica es conocida y aplicado al caso real de la Bah\'ia de Talcahuano
 
 
 \section{Marco Te\'orico}

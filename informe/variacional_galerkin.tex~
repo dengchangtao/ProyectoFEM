@@ -1,4 +1,4 @@
-La formulación fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{helmholtz}
+La formulaci\'on fuerte del problema de valor de frontera \eqref{helmholtz}, es
 
 \begin{align*}
 \text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$ tal que:}\\
@@ -7,44 +7,93 @@ La formulación fuerte del problema de valor de frontera es: (ecuaci\'on \eqref{
 u=0, \ \ \ \ &\boldsymbol{x} \in \partial \Omega_g\\
 \end{align*}
 
-Sean:\\ \\
-$ \mathcal{V} = \left \{ v \in H^1 (\Omega, \mathbb{R}) \ /\  v|_{\partial \Omega_g} = 0 \right \}$\\
-$ \mathcal{S} = \left \{ u \in H^1 (\Omega) \ /\  u,_i n_i = 0, \ \ \boldsymbol{x} \in \partial \Omega_h \right \}$\\ 
-
-multiplicando la ecuaci\'on de Helmholtz por $-v \in \mathcal{V}$ e integrando por partes:\\
-
+ Sean 
+ $ \mathcal{V} = \left \{ v \in H^1 (\Omega, \mathbb{R}) \ /\  v|_{\partial \Omega_g} = 0 \right \}$ y
+  $ \mathcal{S} = \left \{ u \in H^1 (\Omega) \ /\  u,_i n_i = 0, \ \ \boldsymbol{x} \in \partial \Omega_h \right \}$ los espacios test y de soluci\'on. Al multiplicar la ecuaci\'on de Helmholtz por $-v \in \mathcal{V}$ e integrar por partes se obtiene
 $$-\int_{\Omega} v \left( \omega^2 u + (gh u,_i),_i \right) \mathrm{d}\boldsymbol{x} = 0$$
-
 $$-\int_{\Omega} v ( \omega^2 u )\mathrm{d}\boldsymbol{x} -\int_{\partial \Omega} v (gh u,_i) n_i \mathrm{d} S
 +\int_{\Omega} v,_i g h u,_i \mathrm{d}\boldsymbol{x} = 0$$
-
-Pero, por condici\'on de borde: $u,_i n_i = 0 \ \forall \boldsymbol{x} \in \partial \Omega_h$, luego
-
+y por las condiciones de borde Neumann y Dirichlet, se deduce
 $$-\int_{\Omega} v ( \omega^2 u )\mathrm{d}\boldsymbol{x} 
 +\int_{\Omega} v,_i g h u,_i \mathrm{d}\boldsymbol{x} = 0$$
-
-O, en forma abstracta:
+que definiendo $a(v,u)=\int_{\Omega} v,_i g h u,_i \mathrm{d}\boldsymbol{x}$ y $(v,u)=\int_{\Omega} v u\mathrm{d}\boldsymbol{x} $, se puede escribir como
 \begin{equation}
 a(v, u) - \omega^2 (v, u) = 0
 \label{eq:debil_abstracta}
 \end{equation}
 
-Luego, 
+Entonces, la formulaci\'on variacional asociada al problema fuerte de la ecuaci\'on de Helmholtz es
 
-\begin{align*}
-\text{Dados $g$, $h: \Omega \rightarrow \mathbb{R}$, encontrar $(u, \omega^2)$, $u \in \mathcal{S} $, $\omega \in \mathbb{R}$, tal que:}\\
-a(v, u) - \omega^2 (v, u) = 0 \ \ \ \ \  & (W) \\
-\end{align*}
+\begin{equation}
+  \begin{split}
+  \text{Encuentre $u\in\mathcal{S}$ y $\omega \in \mathbb{R}$  tales que} \\
+    a(v,u) - \omega^2 (v,u) = 0 \\
+    \text{ para cualquier $v \in \mathcal{V}$}
+  \end{split}
+  \tag{W}
+\end{equation}
 
-Formulaci\'on Galerkin:
 
-Sean $u^h \in \mathcal{S}^h \left(\equiv \mathcal{V}^h \right)$ con $\mathcal{V}^h \in \mathcal{V}$
-
-entonces:
+Sean $u^h \in \mathcal{S}^h \left( \equiv \mathcal{V}^h \right)$ con $\mathcal{V}^h \in \mathcal{V}$ y tal que $\mathcal{V}^h$ tiene dimensi\'on finita, entonces debe cumplirse que 
 
 $$ a(v^h, u^h) - \omega^2 (v^h, u^h) = 0 $$
 
-Luego la formulaci\'on galerkin queda:
+Luego la formulaci\'on galerkin se puede plantear como
+
+\begin{equation}
+  \begin{split}
+  \text{Encuentre $u^h\in\mathcal{S}^h$ y $\omega^h \in \mathbb{R}$  tales que} \\
+    a(v^h,u^h) - (\omega^h)^2 (v^h,u^h) = 0 \\
+    \text{ para cualquier $v^h \in \mathcal{V}^h$}
+  \end{split}
+  \tag{\text{$W^{FEM}$}}
+\end{equation}
+
+
+Para hallar las ecuaciones matriciales asociadas, debemos expresar $v^h$ y $u^h$ en t\'erminos de las funciones de forma $N(\boldsymbol{x})$, es decir, 
+
+$$v^h = \sum_{A \in \eta-\eta_g}N_A(\boldsymbol{x})v_A$$
+$$u^h = \sum_{A \in \eta-\eta_g}N_A(\boldsymbol{x})u_A$$
+
+donde 
+$\eta$ es el conjunto de \'indices de los  nodos del dominio y $\eta_g$ de \'indices asociados a condiciones de borde de Dirichlet
+
+Reemplazando, se tiene que para todo $ v^h\in \mathcal{V}^h$ debe cumplirse
+
+\begin{equation*}
+\begin{split}
+\sum_{A \in \eta-\eta_g} v_A 
+\left \{
+\sum_{B \in \eta-\eta_g}(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B - 
+\omega^2 \sum_{B \in \eta} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B 
+\right \} = 0
+\end{split}
+\end{equation*}
+
+Como $v_A \neq 0$, entonces para cualquier $A\in \eta-\eta_g$
+$$\left( \sum_{B \in \eta-\eta_g}(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) - 
+\omega^2 \sum_{B \in \eta-\eta_g} a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) u_B\right) =0 $$
+
+que en forma matricial se escribe 
+
+$$(\vec M - \omega^2 \vec K)\boldsymbol{u_B} = 0$$
+
+donde 
+
+$K_{AB} = a(N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} gh N_A,_i(\boldsymbol{x}) N_B,_i(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+$M_{AB} = (N_A(\boldsymbol{x}), N_B(\boldsymbol{x})) = \int_{\Omega} N_A(\boldsymbol{x}) N_B(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+y a  nivel de elemento
+
+$K_{ab} = a(N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} gh N_a,_i(\boldsymbol{x}) N_b,_i(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+$M_{ab} = (N_a(\boldsymbol{x}), N_b(\boldsymbol{x})) = \int_{\Omega_e} N_a(\boldsymbol{x}) N_b(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} $\\
+
+Los elementos utilizados en este estudio fueron elementos isoparam\'etricos Tri3, y las matrices se construyeron sumando las contribuciones elementales usando los algoritmos de ensamblaje propuestos por Hughes \cite{hughes2000}
+
+
+
 
 
 

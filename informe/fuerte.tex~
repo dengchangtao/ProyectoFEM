@@ -10,7 +10,7 @@ Sea  $\Omega' \subset \mathbb{R}^3$ el dominio de inter\'es, $t_f>0$ el tiempo f
   \label{NS-incompresible}
 \end{align}
 
-En particular, en una bah\'ia de interior $\Omega \subset \mathbb{R}^2$, con borde impermeable $\partial\Omega_h$ y linea nodal $\partial \Omega_g$ tales que $\partial \Omega = \partial \Omega_h \cup \partial \Omega_g$ , y bajo el supuesto que las ondas son suficietemente largas, de forma que las aceleraciones verticales no tienen influencia significtiva sobre el perfil de presiones hidrost\'atico, y por medio de integraci\'on vertical entre el fondo $b$ y la superficie libre $\eta$, las Ecuaciones No Lineales de Aguas Someras (Non-Linear Shallow water Equations, NSWE) son, 
+En particular, en una bah\'ia de interior $\Omega \subset \mathbb{R}^2$, con borde impermeable $\partial\Omega_h$ y linea nodal $\partial \Omega_g$ tales que $\partial \Omega = \partial \Omega_h \cup \partial \Omega_g$ , y bajo el supuesto que las ondas son suficientemente largas, de forma que las aceleraciones verticales no tienen influencia significtiva sobre el perfil de presiones hidrost\'atico, y por medio de integraci\'on vertical entre el fondo $b$ y la superficie libre $\eta$, las Ecuaciones No Lineales de Aguas Someras (Non-Linear Shallow water Equations, NSWE) son, 
 
 \begin{align}  \begin{split}
 \frac{\partial}{\partial t}\left(\eta\right)+\frac{\partial}{\partial x}\left(hu\right)+\frac{\partial}{\partial y}\left(hv\right) & =0  \text{       si } x \in \Omega\\
@@ -29,7 +29,7 @@ donde, viendo la figura \ref{fig:vars}, $h:(t,x,y) \in [0,t_f] \times \Omega \to
   \begin{figure}
     \centering
     \includegraphics[width=10cm]{figs/variables.pdf}    
-    \caption{ Vist esquem\'tica de ls varibles hidrodin\'amicas definidas para las Ecuaciones No Lineales de Aguas Somers (NSWE).}
+    \caption{ Vista esquem\'tica de ls varibles hidrodin\'amicas definidas para las Ecuaciones No Lineales de Aguas Someras (NSWE).}
     \label{fig:vars}
   \end{figure}
 
